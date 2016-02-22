@@ -38,6 +38,7 @@
             // GenerateSystem
             // 
             this.GenerateSystem.Caption = "生成系统";
+            this.GenerateSystem.Category = "Security";
             this.GenerateSystem.ConfirmationMessage = "执行本动作后，将会重新启动应用程序，这将会影响到正在操作的用户，其他用户未保存的数据将会丢失，确定要这样做吗？";
             this.GenerateSystem.Id = "生成系统";
             this.GenerateSystem.ToolTip = null;

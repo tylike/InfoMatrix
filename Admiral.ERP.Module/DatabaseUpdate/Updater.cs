@@ -279,6 +279,17 @@ namespace Admiral.ERP.Module.DatabaseUpdate {
                 fs.Type = type;
                 fs.Memo = memo;
             }
+            var em = ObjectSpace.FindObject<IEditFormatSolution>(new BinaryOperator("FormatString", formatString));
+            if (em == null)
+            {
+                em = ObjectSpace.CreateObject<IEditFormatSolution>();
+                em.FormatString = formatString;
+                em.Name = name;
+                em.SampleInput = sampleInput;
+                em.SampleOut = sampleOut;
+                em.Type = type;
+                em.Memo = memo;
+            }
 
         }
 

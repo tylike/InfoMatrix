@@ -28,6 +28,7 @@ namespace Admiral.ERP.Module.BusinessObjects.SYS
 
     #region 属性
     [Domain]
+    [XafDefaultProperty("Caption")]
     [ModelAbstractClass]
     public interface IPropertyBase :IName,ICaption
     {
@@ -142,8 +143,7 @@ namespace Admiral.ERP.Module.BusinessObjects.SYS
             }
             return os.GetObjects<IBusinessObject>().OrderByDescending(x => x.Index).ToList();
         }
-
-
+        
         public static void AfterChange_PropertyType(IProperty p, IObjectSpace os)
         {
             if (p.PropertyType != null && p.PropertyType.ExtendSettingType != null)
@@ -336,8 +336,7 @@ namespace Admiral.ERP.Module.BusinessObjects.SYS
                 propertyInfo.SetSetMethod(set);
             }
             #endregion
-
-
+            
             var format = property.ExtendSetting as IFormattableProperty;
             if (format != null)
             {
@@ -363,38 +362,6 @@ namespace Admiral.ERP.Module.BusinessObjects.SYS
                 property.ExtendSetting.BuildProperty(type, propertyInfo, definedTypes);
             }
             return propertyInfo;
-        }
-
-        public static void BuildCollectionProperty(IProperty property, TypeBuilder type, Dictionary<IBusinessObjectBase, TypeBuilder> definedTypes)
-        {
-            var ptype = typeof(IList<>).MakeGenericType(property.PropertyType.FindType(definedTypes));
-            var propertyInfo = type.DefineProperty(property.Name, PropertyAttributes.RTSpecialName, ptype, Type.EmptyTypes);
-
-            if (property.ReadOnly)
-            {
-                propertyInfo.ReadOnly();
-            }
-
-            if (!string.IsNullOrEmpty(property.Caption))
-            {
-                propertyInfo.ModelDefault("Caption", property.Caption);
-            }
-            var listProperty = property.ExtendSetting as IListProperty;
-            if (listProperty == null)
-                throw new Exception("错误，没有集合类型设置！");
-
-            if (listProperty.IsAggreagte)
-            {
-                propertyInfo.Aggregate();
-            }
-
-            var attr = MethodAttributes.FamANDAssem | MethodAttributes.Family | MethodAttributes.Virtual | MethodAttributes.HideBySig | MethodAttributes.VtableLayoutMask | MethodAttributes.Abstract | MethodAttributes.SpecialName; // System.Reflection.
-            //var setattr = MethodAttributes.FamANDAssem | MethodAttributes.Family | MethodAttributes.Virtual | MethodAttributes.HideBySig | MethodAttributes.VtableLayoutMask | MethodAttributes.Abstract | MethodAttributes.SpecialName;
-            propertyInfo.SetGetMethod(type.DefineMethod("get_" + property.Name, attr, ptype, Type.EmptyTypes));
-            //var set = type.DefineMethod("set_" + property.Name, setattr, typeof(void), new Type[] { ptype });
-            //set.DefineParameter(1, ParameterAttributes.None, "value");
-            //propertyInfo.SetSetMethod(set);
-            ReferencePropertyLogic.BuildFilterOption(listProperty, propertyInfo);
         }
     }
 
@@ -439,8 +406,10 @@ namespace Admiral.ERP.Module.BusinessObjects.SYS
         [DataSourceCriteria("Type.FullName='@This.PropertyTypeFullName'")]
         [ImmediatePostData]
         IEditFormatSolution EditMask { get; set; }
-
+        [ModelDefault("Caption", "格式类型")]
         EditMaskType EditMaskType { get; set; }
+
+        [ModelDefault("Caption", "格式字符")]
         string EditMaskString { get; set; }
 
         [Browsable(false)]
@@ -452,7 +421,7 @@ namespace Admiral.ERP.Module.BusinessObjects.SYS
     {
         public static void AfterChange_EditMask(IFormattableProperty p)
         {
-            p.DisplayFormatString = p.DisplayFormat?.FormatString;
+            p.EditMaskString = p.EditMask?.FormatString;
             p.EditMaskType = p.EditMask != null ? EditMaskType.Simple : p.EditMask.MaskType;
         }
 
@@ -575,6 +544,41 @@ namespace Admiral.ERP.Module.BusinessObjects.SYS
         {
             return os.GetObjects<IBusinessObject>();
         }
+        //(IProperty property, TypeBuilder type, Dictionary<IBusinessObjectBase, TypeBuilder> definedTypes)
+        public void BuildProperty(IListProperty property, TypeBuilder type,Dictionary<IBusinessObjectBase, TypeBuilder> definedTypes)
+        {
+            BuildCollectionProperty(property, type, definedTypes);
+        }
+
+        public static void BuildCollectionProperty(IListProperty property, TypeBuilder type, Dictionary<IBusinessObjectBase, TypeBuilder> definedTypes)
+        {
+            var ptype = typeof(IList<>).MakeGenericType(property.PropertyType.FindType(definedTypes));
+            var propertyInfo = type.DefineProperty(property.Name, PropertyAttributes.RTSpecialName, ptype, Type.EmptyTypes);
+
+            if (property.ReadOnly)
+            {
+                propertyInfo.ReadOnly();
+            }
+
+            if (!string.IsNullOrEmpty(property.Caption))
+            {
+                propertyInfo.ModelDefault("Caption", property.Caption);
+            }
+ 
+
+            if (property.IsAggreagte)
+            {
+                propertyInfo.Aggregate();
+            }
+
+            var attr = MethodAttributes.FamANDAssem | MethodAttributes.Family | MethodAttributes.Virtual | MethodAttributes.HideBySig | MethodAttributes.VtableLayoutMask | MethodAttributes.Abstract | MethodAttributes.SpecialName; // System.Reflection.
+            //var setattr = MethodAttributes.FamANDAssem | MethodAttributes.Family | MethodAttributes.Virtual | MethodAttributes.HideBySig | MethodAttributes.VtableLayoutMask | MethodAttributes.Abstract | MethodAttributes.SpecialName;
+            propertyInfo.SetGetMethod(type.DefineMethod("get_" + property.Name, attr, ptype, Type.EmptyTypes));
+            //var set = type.DefineMethod("set_" + property.Name, setattr, typeof(void), new Type[] { ptype });
+            //set.DefineParameter(1, ParameterAttributes.None, "value");
+            //propertyInfo.SetSetMethod(set);
+            ReferencePropertyLogic.BuildFilterOption(property, propertyInfo);
+        }
     }
 
     #endregion
@@ -625,7 +629,7 @@ typeof(IRuleIsReferencedInfo),
 typeof(IRuleFromBoolPropertyInfo),
 typeof(IRuleValueComparisonInfo)
 )]
-    public interface IStringProperty : IPropertyExtend
+    public interface IStringProperty : IPropertyExtend,IFormattableProperty
         //, IFormattableProperty
     {
         [XafDisplayName("行数")]

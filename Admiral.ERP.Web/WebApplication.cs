@@ -316,5 +316,7 @@ namespace Admiral.ERP.Web {
             //HttpRuntime.UnloadAppDomain();
             WebWindow.CurrentRequestWindow.RegisterClientScript("restart","window.location.href='/restart.aspx'");
         }
+
+
     }
 }

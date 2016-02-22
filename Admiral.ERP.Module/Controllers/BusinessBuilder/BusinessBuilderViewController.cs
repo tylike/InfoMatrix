@@ -31,7 +31,7 @@ namespace Admiral.ERP.Module.Controllers
     {
         public BusinessBuilderViewController()
         {
-            TargetObjectType = typeof (IBusinessObject);
+            //TargetObjectType = typeof (IBusinessObject);
             TargetViewNesting = Nesting.Root;
             TargetViewType = ViewType.ListView;
             InitializeComponent();

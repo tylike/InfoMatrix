@@ -478,6 +478,20 @@
               <LayoutItem Id="PredefinedValues" Index="2" />
               <LayoutItem Id="IsPassword" Index="3" />
             </LayoutGroup>
+            <LayoutGroup Id="IFormattableProperty" Direction="Vertical" Caption="格式化">
+              <LayoutItem Id="EditMaskType" ViewItem="EditMaskType" Index="0" IsNewNode="True" />
+              <LayoutItem Id="EditMaskString" ViewItem="EditMaskString" Index="1" IsNewNode="True" />
+              <LayoutItem Id="EditMask" ViewItem="EditMask" Index="2" IsNewNode="True" />
+              <LayoutGroup Id="IFormattableProperty_col1" Removed="True">
+                <LayoutItem Id="DisplayFormat" Removed="True" />
+                <LayoutItem Id="DisplayFormatString" Removed="True" />
+                <LayoutItem Id="EditMask" Removed="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="IFormattableProperty_col2" Removed="True">
+                <LayoutItem Id="EditMaskString" Removed="True" />
+                <LayoutItem Id="EditMaskType" Removed="True" />
+              </LayoutGroup>
+            </LayoutGroup>
           </LayoutGroup>
         </LayoutGroup>
       </Layout>
@@ -517,7 +531,7 @@
               </LayoutGroup>
               <LayoutGroup Id="IFormattableProperty_col2" Direction="Horizontal">
                 <LayoutGroup Id="G2" Index="0" IsNewNode="True">
-                  <LayoutItem Id="EditMask" ViewItem="EditMask" ShowCaption="" Index="2" IsNewNode="True" />
+                  <LayoutItem Id="EditMask" ViewItem="EditMask" Index="2" IsNewNode="True" />
                 </LayoutGroup>
                 <LayoutItem Id="EditMaskString" Removed="True" />
                 <LayoutItem Id="EditMaskType" Removed="True" />
@@ -533,19 +547,77 @@
       </Layout>
     </DetailView>
     <DetailView Id="IImageProperty_DetailView" Index="1005" />
-    <DetailView Id="IListProperty_DetailView" Index="1006" />
+    <DetailView Id="IListProperty_DetailView" Index="1006">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="R1" Direction="Horizontal" Index="0" IsNewNode="True">
+            <LayoutItem Id="Name" ViewItem="Name" ShowCaption="" Index="0" IsNewNode="True" />
+            <LayoutItem Id="Caption" ViewItem="Caption" ShowCaption="" Index="1" IsNewNode="True" />
+          </LayoutGroup>
+          <LayoutGroup Id="R2" Index="1" IsNewNode="True">
+            <LayoutItem Id="PropertyType" ViewItem="PropertyType" ShowCaption="" Index="2" IsNewNode="True" />
+          </LayoutGroup>
+          <LayoutGroup Id="R3" Direction="Horizontal" Index="2" IsNewNode="True">
+            <LayoutItem Id="ToolTip" ViewItem="ToolTip" ShowCaption="" Index="1" IsNewNode="True" />
+            <LayoutItem Id="PropertyEditor" ViewItem="PropertyEditor" ShowCaption="" Index="2" IsNewNode="True" />
+          </LayoutGroup>
+          <LayoutGroup Id="R4" Index="3" Direction="Horizontal" IsNewNode="True">
+            <LayoutItem Id="IsAggreagte" ViewItem="IsAggreagte" ShowCaption="" Index="0" IsNewNode="True" />
+            <LayoutItem Id="IsManyToMany" ViewItem="IsManyToMany" ShowCaption="" Index="1" IsNewNode="True" />
+            <LayoutItem Id="ReadOnly" ViewItem="ReadOnly" ShowCaption="" Index="2" IsNewNode="True" />
+            <LayoutItem Id="ImmediatePostData" ViewItem="ImmediatePostData" ShowCaption="" Index="3" IsNewNode="True" />
+          </LayoutGroup>
+          <LayoutGroup Id="R5" Index="4" Direction="Horizontal" IsNewNode="True">
+            <LayoutItem Id="BackReferenceProperty" ViewItem="BackReferenceProperty" ShowCaption="" Index="2" IsNewNode="True" />
+            <LayoutItem Id="Index" ViewItem="Index" ShowCaption="" Index="3" IsNewNode="True" />
+          </LayoutGroup>
+          <LayoutGroup Id="IFilterOption" Index="5" ShowCaption="False" IsNewNode="True">
+            <LayoutItem Id="Criteria" ViewItem="Criteria" ShowCaption="" Index="0" IsNewNode="True" />
+            <LayoutItem Id="DataSourceProperty" ViewItem="DataSourceProperty" ShowCaption="" Index="1" IsNewNode="True" />
+            <LayoutItem Id="DataSourceCriteriaProperty" ViewItem="DataSourceCriteriaProperty" ShowCaption="" Index="2" IsNewNode="True" />
+          </LayoutGroup>
+          <LayoutGroup Id="ListRules_Group" Index="6" />
+          <LayoutGroup Id="SimpleEditors" Removed="True">
+            <LayoutGroup Id="ICaption" Removed="True">
+              <LayoutItem Id="Caption" Removed="True" />
+            </LayoutGroup>
+            <LayoutGroup Id="IFilterOption" Removed="True" />
+            <LayoutGroup Id="IListProperty" Removed="True">
+              <LayoutItem Id="BackReferenceProperty" Removed="True" />
+              <LayoutItem Id="IsAggreagte" Removed="True" />
+              <LayoutItem Id="IsManyToMany" Removed="True" />
+            </LayoutGroup>
+            <LayoutGroup Id="IName" Removed="True">
+              <LayoutItem Id="Name" Removed="True" />
+            </LayoutGroup>
+            <LayoutGroup Id="IPropertyBase" Removed="True">
+              <LayoutGroup Id="IPropertyBase_col1" Removed="True">
+                <LayoutItem Id="Index" Removed="True" />
+                <LayoutItem Id="PropertyType" Removed="True" />
+                <LayoutItem Id="ReadOnly" Removed="True" />
+                <LayoutItem Id="ToolTip" Removed="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="IPropertyBase_col2">
+                <LayoutItem Id="ImmediatePostData" Removed="True" />
+                <LayoutItem Id="PropertyEditor" Removed="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
     <DetailView Id="INumberProperty_DetailView" Index="1007">
       <Layout>
         <LayoutGroup Id="Main">
           <LayoutGroup Id="SimpleEditors">
             <LayoutGroup Id="IFormattableProperty_Copy" Index="2" Caption="IFormattable Property" ShowCaption="False" IsNewNode="True">
               <LayoutGroup Id="IFormattableProperty_col1" Index="0" ShowCaption="False" Direction="Horizontal" IsNewNode="True">
-                <LayoutItem Id="DisplayFormat" ViewItem="DisplayFormat" ShowCaption="" Index="0" IsNewNode="True" />
+                <LayoutItem Id="DisplayFormat" ViewItem="DisplayFormat" Index="0" IsNewNode="True" />
                 <LayoutItem Id="DisplayFormatString" ShowCaption="False" Index="1" ViewItem="DisplayFormatString" IsNewNode="True" />
               </LayoutGroup>
               <LayoutGroup Id="IFormattableProperty_col2" Index="1" Direction="Horizontal" ShowCaption="False" IsNewNode="True">
                 <LayoutGroup Id="G2" Index="0" IsNewNode="True">
-                  <LayoutItem Id="EditMask" ViewItem="EditMask" ShowCaption="" Index="2" IsNewNode="True" />
+                  <LayoutItem Id="EditMask" ViewItem="EditMask" Index="2" IsNewNode="True" />
                 </LayoutGroup>
                 <LayoutGroup Id="G1" Direction="Horizontal" IsNewNode="True">
                   <LayoutItem Id="EditMaskType" ViewItem="EditMaskType" ShowCaption="False" Index="0" IsNewNode="True" />
