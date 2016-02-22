@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <DashboardView Id="产品管理">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutItem Id="产品管理" ViewItem="产品管理" />
+          <LayoutItem Id="产品分类" ViewItem="产品分类" />
+        </LayoutGroup>
+      </Layout>
+    </DashboardView>
+    <DetailView Id="IListProperty_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="Rules_Group" ToolTip="这里填加的验证规则是指，集合内填写数据时进行验证，如，在订单上有一个集合类型，订单明细，填加了规则“产品必填”，如果在单据明细中没有设置任何规则，则只在这个集合填加数据时要求产品是必填的。如果订单明细这个业务对象在多处使用了，可以分别设置针对那些集合的规则。">
+            <LayoutItem Id="Rules" ToolTip="这里填加的验证规则是指，集合内填写数据时进行验证，如，在订单上有一个集合类型，订单明细，填加了规则“产品必填”，如果在单据明细中没有设置任何规则，则只在这个集合填加数据时要求产品是必填的。如果订单明细这个业务对象在多处使用了，可以分别设置针对那些集合的规则。" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="FlowChartMenuItem_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="QuickDesign">
+              <LayoutItem Id="QuickDesign" ViewItem="QuickDesign" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="IBusinessObject_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="ICaption">
+              <LayoutItem Id="@d4bc257d-e32d-438f-b0b4-e81193f0d230" ViewItem="Item" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="IRuleRequiredInfo_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="IRuleCollectionPropertyInfo">
+              <LayoutItem Id="TargetCollectionOwnerType" Removed="True" />
+              <LayoutItem Id="TargetCollectionPropertyName" Removed="True" />
+              <LayoutGroup Id="TargetCollectionProperties">
+                <LayoutItem Id="TargetCollectionPropertyName" ViewItem="TargetCollectionPropertyName" />
+                <LayoutItem Id="TargetCollectionOwnerType" ViewItem="TargetCollectionOwnerType" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+  </Views>
+</Application>

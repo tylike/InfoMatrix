@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <BOModel Id="BOModel">
+    <Class Name="Admiral.ERP.Module.BusinessObjects.Test.Excel">
+      <OwnMembers Id="OwnMembers">
+        <Member Name="ExcelView" PropertyEditorType="Admiral.ERP.Module.Web.Editors.ASPxSpreadsheetPropertyEditor" />
+      </OwnMembers>
+    </Class>
+    <Class Name="Admiral.ERP.Module.BusinessObjects.SYS.MenuItemBase">
+      <OwnMembers Id="OwnMembers">
+        <Member Name="ViewID" PropertyEditorType="Admiral.ERP.Module.Web.Editors.WebViewIdPropertyEditor" />
+      </OwnMembers>
+    </Class>
+  </BOModel>
+</Application>

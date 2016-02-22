@@ -1,0 +1,334 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <DashboardView Id="产品管理">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutItem Id="产品管理" ViewItem="产品管理" />
+          <LayoutItem Id="产品分类" ViewItem="产品分类" />
+        </LayoutGroup>
+      </Layout>
+    </DashboardView>
+    <DetailView Id="FlowChartMenuItem_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="QuickDesign">
+              <LayoutItem Id="QuickDesign" ViewItem="QuickDesign" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="IBooleanProperty_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="Rules_Group">
+            <LayoutItem Id="Rules" ViewItem="Rules" />
+          </LayoutGroup>
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutItem Id="Expression" ViewItem="Expression" />
+            <LayoutGroup Id="IBooleanProperty">
+              <LayoutItem Id="ImmediatePostData" ViewItem="ImmediatePostData" />
+              <LayoutItem Id="ReadOnly" ViewItem="ReadOnly" />
+            </LayoutGroup>
+            <LayoutGroup Id="ICaption">
+              <LayoutItem Id="ToolTip" ViewItem="ToolTip" />
+              <LayoutItem Id="Index" ViewItem="Index" />
+            </LayoutGroup>
+            <LayoutItem Id="编辑器" ViewItem="PropertyEditor" />
+            <LayoutGroup Id="IName">
+              <LayoutItem Id="Caption" ViewItem="Caption" />
+              <LayoutItem Id="Name" ViewItem="Name" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="IBusinessObject_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <TabbedGroup Id="设置">
+            <LayoutGroup Id="基础信息">
+              <LayoutGroup Id="R3">
+                <LayoutItem Id="Empty" ViewItem="Item" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </TabbedGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="IColorProperty_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="IProperty">
+              <LayoutGroup Id="IProperty_col1">
+                <LayoutItem Id="Name" ViewItem="Name" Index="0" />
+                <LayoutItem Id="ReadOnly" Removed="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="IProperty_col2">
+                <LayoutItem Id="Caption" ViewItem="Caption" Index="0" />
+                <LayoutItem Id="Expression" Removed="True" />
+                <LayoutItem Id="ImmediatePostData" Removed="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+            <LayoutGroup Id="IName">
+              <LayoutItem Id="Expression" ViewItem="Expression" Index="1" />
+              <LayoutItem Id="Name" Removed="True" />
+            </LayoutGroup>
+            <LayoutGroup Id="ICaption" Direction="Horizontal">
+              <LayoutItem Id="ReadOnly" ViewItem="ReadOnly" Index="0" />
+              <LayoutItem Id="ImmediatePostData" ViewItem="ImmediatePostData" Index="2" />
+              <LayoutItem Id="Required" ViewItem="Required" Index="2" />
+              <LayoutItem Id="UniqueValue" ViewItem="UniqueValue" Index="3" />
+              <LayoutItem Id="Caption" Removed="True" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="IDateTimeProperty_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="IProperty" Index="0">
+              <LayoutGroup Id="IProperty_col1">
+                <LayoutItem Id="Name" ViewItem="Name" Index="0" />
+                <LayoutItem Id="DisplayFormat" ViewItem="DisplayFormat" Index="1" />
+                <LayoutItem Id="ReadOnly" Index="1" Removed="True" />
+                <LayoutItem Id="ToolTip" Index="2" />
+                <LayoutItem Id="GroupInterval" ViewItem="GroupInterval" Index="3" />
+              </LayoutGroup>
+              <LayoutGroup Id="IProperty_col2">
+                <LayoutItem Id="Caption" ViewItem="Caption" Index="0" />
+                <LayoutItem Id="EditMask" ViewItem="EditMask" Index="1" />
+                <LayoutItem Id="Expression" Index="3" />
+                <LayoutItem Id="ImmediatePostData" Index="3" Removed="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+            <LayoutGroup Id="IName">
+              <LayoutItem Id="Name" Removed="True" />
+            </LayoutGroup>
+            <LayoutGroup Id="ICaption">
+              <LayoutItem Id="Caption" Removed="True" />
+            </LayoutGroup>
+            <LayoutGroup Id="IDateTimeProperty">
+              <LayoutItem Id="UniqueValue" ViewItem="UniqueValue" />
+              <LayoutItem Id="Required" ViewItem="Required" />
+              <LayoutItem Id="ImmediatePostData" ViewItem="ImmediatePostData" />
+              <LayoutItem Id="ReadOnly" ViewItem="ReadOnly" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="IImageProperty_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="IProperty" ShowCaption="False">
+              <LayoutGroup Id="IProperty_col1">
+                <LayoutItem Id="Name" ViewItem="Name" Index="0" />
+                <LayoutItem Id="ReadOnly" Removed="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="IProperty_col2">
+                <LayoutItem Id="Caption" ViewItem="Caption" Index="0" />
+                <LayoutItem Id="ImmediatePostData" Removed="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="IName" Index="2" ShowCaption="False">
+                <LayoutItem Id="ReadOnly" ViewItem="ReadOnly" Index="0" />
+                <LayoutItem Id="ImmediatePostData" ViewItem="ImmediatePostData" Index="2" />
+                <LayoutItem Id="Required" ViewItem="Required" Index="2" />
+              </LayoutGroup>
+            </LayoutGroup>
+            <LayoutGroup Id="ICaption">
+              <LayoutItem Id="Caption" Removed="True" />
+            </LayoutGroup>
+            <LayoutGroup Id="IName" Removed="True">
+              <LayoutItem Id="ReadOnly" ViewItem="ReadOnly" Index="0" />
+              <LayoutItem Id="ImmediatePostData" ViewItem="ImmediatePostData" Index="2" />
+              <LayoutItem Id="Required" ViewItem="Required" Index="2" />
+              <LayoutItem Id="Name" Removed="True" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="IListProperty_DetailView">
+      <Items Id="Items">
+        <PropertyEditor Id="PropertyType" DataSourceCriteria="[IsPersistent]" />
+      </Items>
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <TabbedGroup Id="Tabs">
+            <LayoutGroup Id="Rules" Removed="True" />
+          </TabbedGroup>
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="IName" Direction="Horizontal" Index="0" Removed="True">
+              <LayoutItem Id="Name" Removed="True" />
+            </LayoutGroup>
+            <LayoutGroup Id="IProperty" Index="3" Direction="Vertical" ShowCaption="False" Removed="True">
+              <LayoutGroup Id="IProperty_col1" Removed="True">
+                <LayoutItem Id="ReadOnly" Removed="True" />
+                <LayoutItem Id="Required" Removed="True" />
+                <LayoutItem Id="ToolTip" Removed="True" />
+                <LayoutItem Id="UniqueValue" Removed="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="IProperty_col2" Removed="True">
+                <LayoutItem Id="Expression" Removed="True" />
+                <LayoutItem Id="ImmediatePostData" Removed="True" />
+                <LayoutItem Id="Index" Removed="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+            <LayoutGroup Id="ICaption" Direction="Horizontal" Index="4" Removed="True">
+              <LayoutItem Id="Caption" Removed="True" />
+            </LayoutGroup>
+            <LayoutGroup Id="Col2">
+              <LayoutItem Id="Index" ViewItem="Index" />
+              <LayoutItem Id="Caption" ViewItem="Caption" />
+            </LayoutGroup>
+            <LayoutGroup Id="Col1">
+              <LayoutItem Id="PropertyType" ViewItem="PropertyType" />
+              <LayoutItem Id="ReadOnly" ViewItem="ReadOnly" />
+              <LayoutItem Id="ToolTip" ViewItem="ToolTip" />
+              <LayoutItem Id="Name" ViewItem="Name" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="INumberProperty_DetailView">
+      <Items Id="Items">
+        <PropertyEditor Id="PropertyType" DataSourceCriteria="[Flag] = 'Number'" />
+      </Items>
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="Rules_Group" Index="2" />
+          <LayoutGroup Id="Row">
+            <LayoutItem Id="Unique" ViewItem="UniqueValue" />
+            <LayoutItem Id="Required" ViewItem="Required" />
+            <LayoutItem Id="ImmediatePostData" ViewItem="ImmediatePostData" />
+            <LayoutItem Id="ReadOnly" ViewItem="ReadOnly" />
+          </LayoutGroup>
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="ICaption" Removed="True" />
+            <LayoutGroup Id="IName" Removed="True">
+              <LayoutItem Id="Name" Removed="True" />
+            </LayoutGroup>
+            <LayoutGroup Id="IProperty" Removed="True">
+              <LayoutItem Id="Index" Removed="True" />
+              <LayoutItem Id="ReadOnly" Removed="True" />
+              <LayoutItem Id="ToolTip" Removed="True" />
+            </LayoutGroup>
+            <LayoutGroup Id="R2">
+              <LayoutItem Id="Index" ViewItem="Index" />
+              <LayoutItem Id="PropertyType" ViewItem="PropertyType" />
+              <LayoutItem Id="Caption" ViewItem="Caption" />
+            </LayoutGroup>
+            <LayoutGroup Id="R1">
+              <LayoutItem Id="Expression" ViewItem="Expression" />
+              <LayoutItem Id="ToolTip" ViewItem="ToolTip" />
+              <LayoutItem Id="Name" ViewItem="Name" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="IReferenceProperty_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="IProperty">
+              <LayoutGroup Id="IProperty_col1">
+                <LayoutItem Id="Name" ViewItem="Name" Index="0" />
+                <LayoutItem Id="Criteria" ViewItem="Criteria" Index="1" />
+                <LayoutItem Id="DataSourceProperty" ViewItem="DataSourceProperty" Index="2" />
+                <LayoutItem Id="ToolTip" Index="3" />
+                <LayoutItem Id="ReadOnly" Removed="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="IProperty_col2">
+                <LayoutItem Id="Caption" ViewItem="Caption" Index="0" />
+                <LayoutItem Id="LookupEditorMode" ViewItem="LookupEditorMode" Index="1" />
+                <LayoutItem Id="DataSourceCriteriaProperty" ViewItem="DataSourceCriteriaProperty" Index="2" />
+                <LayoutItem Id="Expression" Index="3" Removed="True" />
+                <LayoutItem Id="ImmediatePostData" Removed="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+            <LayoutGroup Id="IName">
+              <LayoutItem Id="Expression" Index="3" ViewItem="Expression" />
+              <LayoutItem Id="Name" Removed="True" />
+            </LayoutGroup>
+            <LayoutGroup Id="ICaption" Direction="Horizontal">
+              <LayoutItem Id="ReadOnly" ViewItem="ReadOnly" Index="0" />
+              <LayoutItem Id="ImmediatePostData" ViewItem="ImmediatePostData" Index="2" />
+              <LayoutItem Id="Required" ViewItem="Required" Index="2" />
+              <LayoutItem Id="UniqueValue" ViewItem="UniqueValue" Index="3" />
+              <LayoutItem Id="Caption" Removed="True" />
+            </LayoutGroup>
+            <LayoutGroup Id="IFilterOption">
+              <LayoutItem Id="PropertyType" ViewItem="PropertyType" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="IRuleRequiredInfo_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="IRuleCollectionPropertyInfo">
+              <LayoutGroup Id="TargetCollectionProperties">
+                <LayoutItem Id="TargetCollectionPropertyName" ViewItem="TargetCollectionPropertyName" />
+                <LayoutItem Id="TargetCollectionOwnerType" ViewItem="TargetCollectionOwnerType" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="IStringProperty_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="IProperty" Index="0">
+              <LayoutGroup Id="IProperty_col1">
+                <LayoutItem Id="Name" ViewItem="Name" Index="0" />
+                <LayoutItem Id="DisplayFormat" ViewItem="DisplayFormat" Index="1" />
+                <LayoutItem Id="EditMaskType" ViewItem="EditMaskType" Index="2" />
+                <LayoutItem Id="EditMask" ViewItem="EditMask" Index="3" />
+                <LayoutItem Id="ToolTip" Index="4" />
+                <LayoutItem Id="ReadOnly" Removed="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="IProperty_col2">
+                <LayoutItem Id="Caption" ViewItem="Caption" Index="0" />
+                <LayoutItem Id="RowCount" ViewItem="RowCount" Index="2" />
+                <LayoutItem Id="Expression" Index="3" />
+                <LayoutItem Id="Size" ViewItem="Size" Index="4" />
+                <LayoutItem Id="ImmediatePostData" Removed="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+            <LayoutGroup Id="IName">
+              <LayoutItem Id="PredefinedValues" ViewItem="PredefinedValues" Index="1" />
+              <LayoutItem Id="Name" Removed="True" />
+            </LayoutGroup>
+            <LayoutGroup Id="ICaption" Removed="True">
+              <LayoutItem Id="Caption" Removed="True" />
+            </LayoutGroup>
+            <LayoutGroup Id="IFormattableProperty">
+              <LayoutItem Id="UniqueValue" ViewItem="UniqueValue" />
+              <LayoutItem Id="Required" ViewItem="Required" />
+              <LayoutItem Id="ImmediatePostData" ViewItem="ImmediatePostData" />
+              <LayoutItem Id="ReadOnly" ViewItem="ReadOnly" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="IBusinessObject_ListView">
+      <Variants Id="Variants">
+        <Variant Id="业务对象-简单类型" ViewID="IBusinessObject_ListView_SimpleType" />
+      </Variants>
+    </ListView>
+  </Views>
+</Application>

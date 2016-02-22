@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <BOModel>
+    <Class Name="DevExpress.ExpressApp.ReportsV2.NewReportWizardParameters" Caption="新建报表向导">
+      <OwnMembers>
+        <Member Name="DataType" Caption="业务对象" />
+        <Member Name="DisplayName" Caption="显示名称" />
+        <Member Name="ReportType" Caption="报表类型" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.ExpressApp.Security.Strategy.SecuritySystemUser" Caption="系统用户" />
+    <Class Name="DevExpress.Persistent.BaseImpl.Analysis" Caption="数据分析" />
+    <Class Name="DevExpress.Persistent.BaseImpl.ReportDataV2" Caption="报表" />
+  </BOModel>
+  <NavigationItems>
+    <Items>
+      <Item Id="Default" Index="0" Caption="系统首页">
+        <Items>
+          <Item Id="MyDetails" Removed="True" />
+          <Item Id="SecuritySystemRole_ListView" Removed="True" />
+          <Item Id="SecuritySystemUser_ListView" Removed="True" />
+        </Items>
+      </Item>
+      <Item Id="Reports" Index="1" Caption="报表分析">
+        <Items>
+          <Item Id="ReportsV2" Caption="报表" />
+        </Items>
+      </Item>
+      <Item Id="权限设置" IsNewNode="True">
+        <Items IsNewNode="True">
+          <Item Id="MyDetails" ViewId="SecuritySystemUser_DetailView" ObjectKey="@CurrentUserID" Caption="我的信息" ImageName="BO_MyDetails" IsNewNode="True" />
+          <Item Id="SecuritySystemRole_ListView" ViewId="SecuritySystemRole_ListView" ObjectKey="" Caption="角色设置" IsNewNode="True" />
+          <Item Id="SecuritySystemUser_ListView" ViewId="SecuritySystemUser_ListView" ObjectKey="" Caption="用户设置" IsNewNode="True" />
+        </Items>
+      </Item>
+    </Items>
+  </NavigationItems>
+  <SchemaModules>
+    <SchemaModule Name="CloneObjectModule" Version="15.2.4.0" IsNewNode="True" />
+    <SchemaModule Name="SchedulerAspNetModule" Version="15.2.4.0" IsNewNode="True" />
+    <SchemaModule Name="SchedulerModuleBase" Version="15.2.4.0" IsNewNode="True" />
+    <SchemaModule Name="SystemAspNetModule" Version="15.2.4.0" IsNewNode="True" />
+    <SchemaModule Name="SystemModule" Version="15.2.4.0" IsNewNode="True" />
+  </SchemaModules>
+  <Views>
+    <DashboardView Id="产品管理">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutItem Id="产品分类" MinSize="0, 0" MaxSize="0, 0" />
+        </LayoutGroup>
+      </Layout>
+    </DashboardView>
+  </Views>
+</Application>

@@ -1,0 +1,910 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application Title="Admiral.ERP" Logo="ExpressAppLogo">
+  <ActionDesign>
+    <Actions>
+      <Action Id="QuickCreateBusiness" ImageName="Action_New">
+        <ChoiceActionItems>
+          <ChoiceActionItem Id="表单" ImageName="ModelEditor_Views" Index="0" />
+          <ChoiceActionItem Id="高级" ImageName="ModelEditor_Settings" Index="1" />
+          <ChoiceActionItem Id="从模板" Index="2" ImageName="Action_Copy_CellValue" />
+        </ChoiceActionItems>
+      </Action>
+    </Actions>
+  </ActionDesign>
+  <BOModel>
+    <Class Name="Admiral.ERP.Module.BusinessObjects.SYS.IStringProperty" Index="1000" />
+    <Class Name="Admiral.ERP.Module.BusinessObjects.SYS.INumberProperty" Index="2000" />
+    <Class Name="Admiral.ERP.Module.BusinessObjects.SYS.IDateTimeProperty" Index="3000" />
+    <Class Name="Admiral.ERP.Module.BusinessObjects.SYS.IBooleanProperty" Index="4000" />
+    <Class Name="Admiral.ERP.Module.BusinessObjects.SYS.IReferenceProperty" Index="5000" />
+    <Class Name="Admiral.ERP.Module.BusinessObjects.SYS.IListProperty" Index="6000" />
+    <Class Name="Admiral.ERP.Module.BusinessObjects.SYS.IImageProperty" Index="7000" />
+    <Class Name="Admiral.ERP.Module.BusinessObjects.SYS.IColorProperty" Index="8000" />
+    <Class Name="Admiral.ERP.Module.BusinessObjects.SYS.IBusinessObject" ImageName="Action_EditModel" />
+    <Class Name="Admiral.ERP.Module.BusinessObjects.TestPropertyType" ImageName="Green.0020" />
+    <Class Name="DevExpress.Persistent.BaseImpl.Event" Caption="工作日历" />
+    <Class Name="DevExpress.Persistent.BaseImpl.ReportDataV2" Caption="报表" />
+  </BOModel>
+  <Localization>
+    <LocalizationGroup Name="Enums">
+      <LocalizationGroup Name="Admiral.ERP.Module.BusinessObjects.SYS.NodeType">
+        <LocalizationItem Name="Form" Value="表单" />
+        <LocalizationItem Name="Generic" Value="常规" />
+      </LocalizationGroup>
+      <LocalizationGroup Name="Admiral.ERP.Module.DomainComponetReisterType">
+        <LocalizationItem Name="AutoRegisterDomainComponent" Value="为务对象（注册）" />
+        <LocalizationItem Name="DomainComponent" Value="业务对象（不注册）" />
+        <LocalizationItem Name="SharePart" Value="公共业务" />
+      </LocalizationGroup>
+      <LocalizationGroup Name="DevExpress.Data.Filtering.Aggregate">
+        <LocalizationItem Name="Avg" Value="平均值" />
+        <LocalizationItem Name="Count" Value="计数" />
+        <LocalizationItem Name="Exists" Value="存在" />
+        <LocalizationItem Name="Max" Value="最大" />
+        <LocalizationItem Name="Min" Value="最小" />
+        <LocalizationItem Name="Single" Value="单个" />
+        <LocalizationItem Name="Sum" Value="累加" />
+      </LocalizationGroup>
+      <LocalizationGroup Name="DevExpress.ExpressApp.ConditionalAppearance.AppearanceContext">
+        <LocalizationItem Name="Any" Value="任意" />
+        <LocalizationItem Name="DetailView" Value="详细视图" />
+        <LocalizationItem Name="ListView" Value="列表视图" />
+      </LocalizationGroup>
+      <LocalizationGroup Name="DevExpress.ExpressApp.ConditionalAppearance.AppearanceItemType">
+        <LocalizationItem Name="Action" Value="按钮" />
+        <LocalizationItem Name="LayoutItem" Value="布局项目" />
+        <LocalizationItem Name="ViewItem" Value="编辑器" />
+      </LocalizationGroup>
+      <LocalizationGroup Name="DevExpress.ExpressApp.Editors.EditMaskType">
+        <LocalizationItem Name="DateTime" Value="日期时间" />
+        <LocalizationItem Name="Default" Value="默认" />
+        <LocalizationItem Name="RegEx" Value="正则表达式" />
+        <LocalizationItem Name="Simple" Value="简单" />
+      </LocalizationGroup>
+      <LocalizationGroup Name="DevExpress.ExpressApp.Editors.ViewEditMode">
+        <LocalizationItem Name="Edit" Value="编辑" />
+        <LocalizationItem Name="View" Value="查看" />
+      </LocalizationGroup>
+      <LocalizationGroup Name="DevExpress.ExpressApp.Editors.ViewItemVisibility">
+        <LocalizationItem Name="Hide" Value="隐藏" />
+        <LocalizationItem Name="Show" Value="显示" />
+        <LocalizationItem Name="ShowEmptySpace" Value="显示空白" />
+      </LocalizationGroup>
+      <LocalizationGroup Name="DevExpress.ExpressApp.Model.GroupInterval">
+        <LocalizationItem Name="Day" Value="天" />
+        <LocalizationItem Name="Month" Value="月" />
+        <LocalizationItem Name="None" Value="无" />
+        <LocalizationItem Name="Smart" Value="智能" />
+        <LocalizationItem Name="Year" Value="年" />
+      </LocalizationGroup>
+      <LocalizationGroup Name="DevExpress.ExpressApp.ModelDifferenceCopyBehavior">
+        <LocalizationItem Name="Merge" Value="合并" />
+        <LocalizationItem Name="Overwrite" Value="覆盖" />
+      </LocalizationGroup>
+      <LocalizationGroup Name="DevExpress.ExpressApp.NewItemRowPosition">
+        <LocalizationItem Name="Bottom" Value="底部" />
+        <LocalizationItem Name="None" Value="不显示" />
+        <LocalizationItem Name="Top" Value="顶部" />
+      </LocalizationGroup>
+      <LocalizationGroup Name="DevExpress.ExpressApp.Notifications.NotificationItemState">
+        <LocalizationItem Name="Active" Value="活动" />
+        <LocalizationItem Name="Postponed" Value="延迟" />
+      </LocalizationGroup>
+      <LocalizationGroup Name="DevExpress.ExpressApp.ReportsV2.ReportType">
+        <LocalizationItem Name="Label" Value="标签" />
+        <LocalizationItem Name="Standard" Value="标准" />
+      </LocalizationGroup>
+      <LocalizationGroup Name="DevExpress.ExpressApp.Templates.ActionsToolbarVisibility">
+        <LocalizationItem Name="Default" Value="默认" />
+        <LocalizationItem Name="Hide" Value="隐藏" />
+        <LocalizationItem Name="Show" Value="显示" />
+      </LocalizationGroup>
+      <LocalizationGroup Name="DevExpress.Persistent.Base.ImageEditorMode">
+        <LocalizationItem Name="DropDownPictureEdit" Value="下拉框" />
+        <LocalizationItem Name="PictureEdit" Value="直接显示" />
+        <LocalizationItem Name="PopupPictureEdit" Value="弹出图片" />
+      </LocalizationGroup>
+      <LocalizationGroup Name="DevExpress.Persistent.Base.ImageSizeMode">
+        <LocalizationItem Name="AutoSize" Value="自动尺寸" />
+        <LocalizationItem Name="CenterImage" Value="图像居中" />
+        <LocalizationItem Name="Normal" Value="正常" />
+        <LocalizationItem Name="StretchImage" Value="拉伸图片" />
+        <LocalizationItem Name="Zoom" Value="缩放" />
+      </LocalizationGroup>
+      <LocalizationGroup Name="DevExpress.Persistent.Base.LookupEditorMode">
+        <LocalizationItem Name="AllItems" Value="下拉框" />
+        <LocalizationItem Name="AllItemsWithSearch" Value="弹出查询并显示所有项目" />
+        <LocalizationItem Name="Auto" Value="自动" />
+        <LocalizationItem Name="Search" Value="弹出查询" />
+      </LocalizationGroup>
+      <LocalizationGroup Name="DevExpress.Persistent.Validation.CriteriaEvaluationBehavior">
+        <LocalizationItem Name="BeforeTransaction" Value="含未提交的" />
+        <LocalizationItem Name="InTransaction" Value="已提交的" />
+      </LocalizationGroup>
+      <LocalizationGroup Name="DevExpress.Persistent.Validation.StringComparisonType">
+        <LocalizationItem Name="Contains" Value="包含" />
+        <LocalizationItem Name="EndsWith" Value="结束于" />
+        <LocalizationItem Name="Equals" Value="等于" />
+        <LocalizationItem Name="NotEquals" Value="不等于" />
+        <LocalizationItem Name="StartsWith" Value="开始于" />
+      </LocalizationGroup>
+      <LocalizationGroup Name="DevExpress.Persistent.Validation.ValidationOutcome">
+        <LocalizationItem Name="Error" Value="错误" />
+        <LocalizationItem Name="Information" Value="信息" />
+        <LocalizationItem Name="Skipped" Value="略过" />
+        <LocalizationItem Name="Valid" Value="有效" />
+        <LocalizationItem Name="Warning" Value="警告" />
+      </LocalizationGroup>
+      <LocalizationGroup Name="DevExpress.Persistent.Validation.ValidationResultType">
+        <LocalizationItem Name="Error" Value="报错" />
+        <LocalizationItem Name="Information" Value="提示" />
+        <LocalizationItem Name="Warning" Value="警告" />
+      </LocalizationGroup>
+      <LocalizationGroup Name="DevExpress.Persistent.Validation.ValueComparisonType">
+        <LocalizationItem Name="Equals" Value="等于" />
+        <LocalizationItem Name="GreaterThan" Value="大于" />
+        <LocalizationItem Name="GreaterThanOrEqual" Value="大于等于" />
+        <LocalizationItem Name="LessThan" Value="小于" />
+        <LocalizationItem Name="LessThanOrEqual" Value="小于等于" />
+        <LocalizationItem Name="NotEquals" Value="不等于" />
+      </LocalizationGroup>
+      <LocalizationGroup Name="System.Drawing.FontStyle">
+        <LocalizationItem Name="Bold" Value="加粗" />
+        <LocalizationItem Name="Italic" Value="斜体" />
+        <LocalizationItem Name="Underline" Value="下划线" />
+      </LocalizationGroup>
+    </LocalizationGroup>
+  </Localization>
+  <NavigationItems StartupNavigationItem="">
+    <Items>
+      <Item Id="Reports">
+        <Items>
+          <Item Id="Reports" Visible="False" />
+        </Items>
+      </Item>
+    </Items>
+  </NavigationItems>
+  <SchemaModules>
+    <SchemaModule Name="CloneObjectModule" Version="15.2.4.0" IsNewNode="True" />
+    <SchemaModule Name="SchedulerModuleBase" Version="15.2.4.0" IsNewNode="True" />
+    <SchemaModule Name="SystemModule" Version="15.2.4.0" IsNewNode="True" />
+  </SchemaModules>
+  <Views>
+    <DetailView Id="IRuleFromBoolPropertyInfo_DetailView" Index="0">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutItem Id="MessageTemplateMustBeTrue" ViewItem="MessageTemplateMustBeTrue" Index="0" IsNewNode="True" />
+            <LayoutGroup Id="IRuleInfoBase" ShowCaption="False">
+              <LayoutGroup Id="IRuleInfoBase_col1">
+                <LayoutItem Id="SkipNullOrEmptyValues" Removed="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="IRuleInfoBase_col2">
+                <LayoutItem Id="SkipNullOrEmptyValues" ViewItem="SkipNullOrEmptyValues" Index="2" IsNewNode="True" />
+                <LayoutItem Id="Name" Removed="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+            <LayoutGroup Id="IRuleFromBoolPropertyInfo" Removed="True">
+              <LayoutItem Id="MessageTemplateMustBeTrue" Removed="True" />
+              <LayoutItem Id="UsedProperties" Removed="True" />
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="SizeableEditors">
+            <LayoutItem Id="Name" ViewItem="Name" Index="1" IsNewNode="True" />
+            <LayoutItem Id="UsedProperties" ViewItem="UsedProperties" Index="1" IsNewNode="True" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="IRuleIsReferencedInfo_DetailView" Index="1">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutItem Id="MessageTemplateMustBeReferenced" ViewItem="MessageTemplateMustBeReferenced" Index="0" IsNewNode="True" />
+            <LayoutGroup Id="IRuleIsReferencedInfo" Index="1" Removed="True">
+              <LayoutItem Id="LooksFor" Removed="True" />
+              <LayoutItem Id="MessageTemplateMustBeReferenced" Removed="True" />
+              <LayoutItem Id="ReferencePropertyName" Removed="True" />
+            </LayoutGroup>
+            <LayoutGroup Id="IRuleInfoBase" ShowCaption="False">
+              <LayoutGroup Id="IRuleInfoBase_col1">
+                <LayoutItem Id="LooksFor" ViewItem="LooksFor" Index="0" IsNewNode="True" />
+                <LayoutItem Id="ReferencePropertyName" ViewItem="ReferencePropertyName" Index="2" IsNewNode="True" />
+                <LayoutItem Id="SkipNullOrEmptyValues" Removed="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="IRuleInfoBase_col2">
+                <LayoutItem Id="CriteriaEvaluationBehavior" ViewItem="CriteriaEvaluationBehavior" Index="0" IsNewNode="True" />
+                <LayoutItem Id="IncludeCurrentObject" ViewItem="IncludeCurrentObject" Index="0" IsNewNode="True" />
+                <LayoutItem Id="SkipNullOrEmptyValues" ViewItem="SkipNullOrEmptyValues" Index="2" IsNewNode="True" />
+                <LayoutItem Id="Name" Removed="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+            <LayoutGroup Id="IRuleSearchObject" ShowCaption="False" Direction="Vertical">
+              <LayoutGroup Id="IRuleSearchObject_col1" Direction="Horizontal">
+                <LayoutItem Id="CriteriaEvaluationBehavior" Removed="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="IRuleSearchObject_col2">
+                <LayoutItem Id="IncludeCurrentObject" Removed="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="SizeableEditors">
+            <LayoutItem Id="Name" ViewItem="Name" Index="1" IsNewNode="True" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="IRuleObjectExistsInfo_DetailView" Index="3">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutItem Id="MessageTemplateMustExist" ViewItem="MessageTemplateMustExist" Index="0" IsNewNode="True" />
+            <LayoutGroup Id="IRuleObjectExistsInfo" Index="1">
+              <LayoutItem Id="MessageTemplateMustExist" Removed="True" />
+            </LayoutGroup>
+            <LayoutGroup Id="IRuleInfoBase" ShowCaption="False">
+              <LayoutGroup Id="IRuleInfoBase_col1">
+                <LayoutItem Id="CriteriaEvaluationBehavior" ViewItem="CriteriaEvaluationBehavior" Index="2" IsNewNode="True" />
+                <LayoutItem Id="SkipNullOrEmptyValues" Removed="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="IRuleInfoBase_col2">
+                <LayoutItem Id="IncludeCurrentObject" ViewItem="IncludeCurrentObject" Index="1" IsNewNode="True" />
+                <LayoutItem Id="SkipNullOrEmptyValues" ViewItem="SkipNullOrEmptyValues" Index="2" IsNewNode="True" />
+                <LayoutItem Id="Name" Index="3" Removed="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+            <LayoutGroup Id="IRuleSearchObject_col1" Index="3" ShowCaption="False" IsNewNode="True">
+              <LayoutItem Id="FoundObjectMessageFormat" ViewItem="FoundObjectMessageFormat" Index="1" IsNewNode="True" />
+              <LayoutItem Id="MessageTemplateFoundObjects" ViewItem="MessageTemplateFoundObjects" Index="1" IsNewNode="True" />
+              <LayoutItem Id="FoundObjectMessagesSeparator" ViewItem="FoundObjectMessagesSeparator" Index="2" IsNewNode="True" />
+            </LayoutGroup>
+            <LayoutGroup Id="IRuleCollectionPropertyInfo" Index="4" />
+            <LayoutGroup Id="IRuleSearchObject" Index="5" Removed="True">
+              <LayoutGroup Id="IRuleSearchObject_col1" Removed="True">
+                <LayoutItem Id="MessageTemplateFoundObjects" ViewItem="MessageTemplateFoundObjects" Index="1" IsNewNode="True" />
+                <LayoutItem Id="CriteriaEvaluationBehavior" Removed="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="IRuleSearchObject_col2">
+                <LayoutItem Id="IncludeCurrentObject" Removed="True" />
+                <LayoutItem Id="MessageTemplateFoundObjects" Removed="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="SizeableEditors">
+            <LayoutItem Id="TargetCriteria" Index="0" />
+            <LayoutItem Id="Name" ViewItem="Name" Index="1" IsNewNode="True" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="IRuleRangeInfo_DetailView" Index="4">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutItem Id="MessageTemplateMustBeInRange" ViewItem="MessageTemplateMustBeInRange" Index="0" IsNewNode="True" />
+            <LayoutGroup Id="IRuleRangeInfo" Index="1" ShowCaption="False">
+              <LayoutGroup Id="IRuleRangeInfo_col1">
+                <LayoutItem Id="MessageTemplateMustBeInRange" Removed="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+            <LayoutGroup Id="IRuleInfoBase" ShowCaption="False">
+              <LayoutGroup Id="IRuleInfoBase_col1">
+                <LayoutItem Id="TargetCollectionAggregate" ViewItem="TargetCollectionAggregate" Index="0" IsNewNode="True" />
+                <LayoutItem Id="SkipNullOrEmptyValues" Removed="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="IRuleInfoBase_col2">
+                <LayoutItem Id="SkipNullOrEmptyValues" ViewItem="SkipNullOrEmptyValues" Index="2" IsNewNode="True" />
+                <LayoutItem Id="Name" Removed="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+            <LayoutGroup Id="IRuleSupportsCollectionAggregatesInfo" Removed="True">
+              <LayoutItem Id="TargetCollectionAggregate" Removed="True" />
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="SizeableEditors">
+            <LayoutItem Id="Name" ViewItem="Name" Index="1" IsNewNode="True" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="IRuleRegularExpressionInfo_DetailView" Index="5">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="IRuleInfoBase" ShowCaption="False">
+              <LayoutGroup Id="IRuleInfoBase_col1">
+                <LayoutItem Id="SkipNullOrEmptyValues" Removed="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="IRuleInfoBase_col2">
+                <LayoutItem Id="SkipNullOrEmptyValues" ViewItem="SkipNullOrEmptyValues" Index="2" IsNewNode="True" />
+                <LayoutItem Id="Name" Removed="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="SizeableEditors">
+            <LayoutItem Id="Name" ViewItem="Name" Index="1" IsNewNode="True" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="IRuleRequiredInfo_DetailView" Index="6">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="IRuleInfoBase" ShowCaption="False">
+              <LayoutGroup Id="IRuleInfoBase_col1">
+                <LayoutItem Id="SkipNullOrEmptyValues" Removed="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="IRuleInfoBase_col2">
+                <LayoutItem Id="SkipNullOrEmptyValues" ViewItem="SkipNullOrEmptyValues" Index="2" IsNewNode="True" />
+                <LayoutItem Id="Name" Removed="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+            <LayoutGroup Id="IRuleCollectionPropertyInfo" ShowCaption="False" Caption="集合设置">
+              <LayoutGroup Id="TargetCollectionProperties" Index="0" Caption="" IsNewNode="True">
+                <LayoutItem Id="TargetCollectionOwnerType" ViewItem="TargetCollectionOwnerType" Index="2" IsNewNode="True" />
+                <LayoutItem Id="TargetCollectionPropertyName" ViewItem="TargetCollectionPropertyName" Index="3" IsNewNode="True" />
+              </LayoutGroup>
+              <LayoutItem Id="MessageTemplateCollectionValidationMessageSuffix" Index="1" />
+              <LayoutItem Id="MessageTemplateTargetDoesNotSatisfyCollectionCriteria" Index="2" />
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="SizeableEditors">
+            <LayoutItem Id="Name" ViewItem="Name" Index="1" IsNewNode="True" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="IRuleStringComparisonInfo_DetailView" Index="7">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutItem Id="MessageTemplateMustBeEqual" ViewItem="MessageTemplateMustBeEqual" Index="0" IsNewNode="True" />
+            <LayoutItem Id="MessageTemplateMustEndWith" ViewItem="MessageTemplateMustEndWith" Index="0" IsNewNode="True" />
+            <LayoutItem Id="MessageTemplateMustBeginWith" ViewItem="MessageTemplateMustBeginWith" Index="1" IsNewNode="True" />
+            <LayoutItem Id="MessageTemplateMustNotBeEqual" ViewItem="MessageTemplateMustNotBeEqual" Index="1" IsNewNode="True" />
+            <LayoutItem Id="MessageTemplateMustContain" ViewItem="MessageTemplateMustContain" Index="2" IsNewNode="True" />
+            <LayoutGroup Id="IRuleStringComparisonInfo" Index="3" Removed="True">
+              <LayoutGroup Id="IRuleStringComparisonInfo_col1">
+                <LayoutItem Id="IgnoreCase" Removed="True" />
+                <LayoutItem Id="MessageTemplateMustBeEqual" Removed="True" />
+                <LayoutItem Id="MessageTemplateMustBeginWith" Removed="True" />
+                <LayoutItem Id="MessageTemplateMustContain" Removed="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="IRuleStringComparisonInfo_col2">
+                <LayoutItem Id="MessageTemplateMustEndWith" Removed="True" />
+                <LayoutItem Id="MessageTemplateMustNotBeEqual" Removed="True" />
+                <LayoutItem Id="OperandValue" Removed="True" />
+                <LayoutItem Id="OperatorType" Removed="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+            <LayoutGroup Id="IRuleInfoBase" ShowCaption="False" Index="4">
+              <LayoutGroup Id="IRuleInfoBase_col1">
+                <LayoutItem Id="OperandValue" ViewItem="OperandValue" Index="2" IsNewNode="True" />
+                <LayoutItem Id="OperatorType" ViewItem="OperatorType" Index="3" IsNewNode="True" />
+                <LayoutItem Id="SkipNullOrEmptyValues" Removed="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="IRuleInfoBase_col2">
+                <LayoutItem Id="IgnoreCase" ViewItem="IgnoreCase" Index="0" IsNewNode="True" />
+                <LayoutItem Id="SkipNullOrEmptyValues" ViewItem="SkipNullOrEmptyValues" Index="2" IsNewNode="True" />
+                <LayoutItem Id="Name" Removed="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+            <LayoutGroup Id="IRuleCollectionPropertyInfo" Index="5" />
+          </LayoutGroup>
+          <LayoutGroup Id="SizeableEditors">
+            <LayoutItem Id="Name" ViewItem="Name" Index="1" IsNewNode="True" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="IRuleUniqueValueInfo_DetailView" Index="8">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="IRuleInfoBase" ShowCaption="False">
+              <LayoutGroup Id="IRuleInfoBase_col1">
+                <LayoutItem Id="CriteriaEvaluationBehavior" ViewItem="CriteriaEvaluationBehavior" Index="0" IsNewNode="True" />
+                <LayoutItem Id="SkipNullOrEmptyValues" Removed="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="IRuleInfoBase_col2">
+                <LayoutItem Id="IncludeCurrentObject" ViewItem="IncludeCurrentObject" Index="0" IsNewNode="True" />
+                <LayoutItem Id="SkipNullOrEmptyValues" ViewItem="SkipNullOrEmptyValues" Index="2" IsNewNode="True" />
+                <LayoutItem Id="Name" Removed="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+            <LayoutGroup Id="IRuleSearchObject" Direction="Vertical" ShowCaption="False">
+              <LayoutGroup Id="IRuleSearchObject_col1" Direction="Horizontal">
+                <LayoutItem Id="CriteriaEvaluationBehavior" Removed="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="IRuleSearchObject_col2">
+                <LayoutItem Id="IncludeCurrentObject" Removed="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="SizeableEditors">
+            <LayoutItem Id="Name" ViewItem="Name" Index="1" IsNewNode="True" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="IRuleValueComparisonInfo_DetailView" Index="9">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="IRuleInfoBase" Index="0" ShowCaption="False">
+              <LayoutGroup Id="IRuleInfoBase_col1">
+                <LayoutItem Id="OperatorType" ViewItem="OperatorType" Index="1" IsNewNode="True" />
+                <LayoutItem Id="RightOperand" ViewItem="RightOperand" Index="2" IsNewNode="True" />
+                <LayoutItem Id="RightOperandExpression" ViewItem="RightOperandExpression" Index="3" IsNewNode="True" />
+                <LayoutItem Id="SkipNullOrEmptyValues" Removed="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="IRuleInfoBase_col2">
+                <LayoutItem Id="SkipNullOrEmptyValues" ViewItem="SkipNullOrEmptyValues" Index="2" IsNewNode="True" />
+                <LayoutItem Id="Name" Removed="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+            <LayoutGroup Id="IRuleCollectionPropertyInfo" Index="1" />
+            <LayoutGroup Id="IRuleValueComparisonInfo" Index="2" Caption="提示信息-不同的比较方法没有被满足时可以提示不同的信息，下面是详细设置" Direction="Vertical">
+              <LayoutItem Id="MessageTemplateMustBeEqualToOperand" ViewItem="MessageTemplateMustBeEqualToOperand" Index="0" IsNewNode="True" />
+              <LayoutItem Id="MessageTemplateMustNotBeEqualToOperand" ViewItem="MessageTemplateMustNotBeEqualToOperand" Index="0" IsNewNode="True" />
+              <LayoutItem Id="MessageTemplateMustBeGreaterThanOperand" ViewItem="MessageTemplateMustBeGreaterThanOperand" Index="1" IsNewNode="True" />
+              <LayoutItem Id="MessageTemplateMustBeGreaterThanOrEqualToOperand" ViewItem="MessageTemplateMustBeGreaterThanOrEqualToOperand" Index="2" IsNewNode="True" />
+              <LayoutItem Id="MessageTemplateMustBeLessThanOperand" ViewItem="MessageTemplateMustBeLessThanOperand" Index="3" IsNewNode="True" />
+              <LayoutItem Id="MessageTemplateMustBeLessThanOrEqualToOperand" ViewItem="MessageTemplateMustBeLessThanOrEqualToOperand" Index="4" IsNewNode="True" />
+              <LayoutGroup Id="IRuleValueComparisonInfo_col1" Removed="True">
+                <LayoutItem Id="MessageTemplateMustBeEqualToOperand" Removed="True" />
+                <LayoutItem Id="MessageTemplateMustBeGreaterThanOperand" Removed="True" />
+                <LayoutItem Id="MessageTemplateMustBeGreaterThanOrEqualToOperand" Removed="True" />
+                <LayoutItem Id="MessageTemplateMustBeLessThanOperand" Removed="True" />
+                <LayoutItem Id="MessageTemplateMustBeLessThanOrEqualToOperand" Removed="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="IRuleValueComparisonInfo_col2" Removed="True">
+                <LayoutItem Id="MessageTemplateMustNotBeEqualToOperand" Removed="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="SizeableEditors">
+            <LayoutItem Id="Name" ViewItem="Name" Index="1" IsNewNode="True" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="IStringProperty_DetailView" Index="1001">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="IStringProperty">
+              <LayoutItem Id="PredefinedValues" Index="2" />
+              <LayoutItem Id="IsPassword" Index="3" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="IBooleanProperty_DetailView" Index="1002" FreezeLayout="True">
+      <Layout IsNewNode="True" Removed="True">
+        <LayoutGroup Id="Main" Index="0" ShowCaption="False" IsNewNode="True">
+          <LayoutGroup Id="SimpleEditors" Index="0" ShowCaption="False" IsNewNode="True">
+            <LayoutGroup Id="ValueText" Index="5" ShowCaption="True" Caption="显示文字" Direction="Horizontal" ToolTip="填写了显示文字后，如果没有设置编辑器的类型，则显示为下拉框。默认的则为一个复选框。" IsNewNode="True">
+              <LayoutItem Id="TrueValue" Index="2" ViewItem="TrueValue" IsNewNode="True" />
+              <LayoutItem Id="FalseValue" Index="3" ViewItem="FalseValue" IsNewNode="True" />
+            </LayoutGroup>
+            <LayoutGroup Id="ValueImage" Index="6" ShowCaption="True" Caption="显示图标" Direction="Horizontal" ToolTip="填写了显示图片后，如果没有设置编辑器的类型，则显示为下拉框。默认的则为一个复选框。显示文字可以和显示图标一起显示在下拉框内。" IsNewNode="True">
+              <LayoutItem Id="TrueImage" Index="4" ViewItem="TrueImage" IsNewNode="True" />
+              <LayoutItem Id="FalseImage" Index="5" ViewItem="FalseImage" IsNewNode="True" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="IColorProperty_DetailView" Index="1003" />
+    <DetailView Id="IDateTimeProperty_DetailView" Index="1004">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="IDateTimeProperty" Index="1" Direction="Horizontal" Removed="True">
+              <LayoutItem Id="ReadOnly" Index="0" ViewItem="ReadOnly" IsNewNode="True" />
+              <LayoutItem Id="ImmediatePostData" Index="1" ViewItem="ImmediatePostData" IsNewNode="True" />
+              <LayoutItem Id="Required" Index="2" ViewItem="Required" IsNewNode="True" />
+              <LayoutItem Id="UniqueValue" Index="3" ViewItem="UniqueValue" IsNewNode="True" />
+              <LayoutItem Id="GroupInterval" Removed="True" />
+            </LayoutGroup>
+            <LayoutGroup Id="IFormattableProperty" Direction="Vertical" ShowCaption="False">
+              <LayoutGroup Id="IFormattableProperty_col1" Direction="Horizontal">
+                <LayoutItem Id="DisplayFormatString" ShowCaption="False" />
+                <LayoutItem Id="EditMask" Removed="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="IFormattableProperty_col2" Direction="Horizontal">
+                <LayoutGroup Id="G2" Index="0" IsNewNode="True">
+                  <LayoutItem Id="EditMask" ViewItem="EditMask" ShowCaption="" Index="2" IsNewNode="True" />
+                </LayoutGroup>
+                <LayoutItem Id="EditMaskString" Removed="True" />
+                <LayoutItem Id="EditMaskType" Removed="True" />
+                <LayoutGroup Id="G1" Direction="Horizontal" IsNewNode="True">
+                  <LayoutItem Id="EditMaskType" ViewItem="EditMaskType" ShowCaption="False" Index="0" IsNewNode="True" />
+                  <LayoutItem Id="EditMaskString" ViewItem="EditMaskString" ShowCaption="False" Index="1" IsNewNode="True" />
+                </LayoutGroup>
+              </LayoutGroup>
+              <LayoutItem Id="GroupInterval" ViewItem="GroupInterval" IsNewNode="True" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="IImageProperty_DetailView" Index="1005" />
+    <DetailView Id="IListProperty_DetailView" Index="1006" />
+    <DetailView Id="INumberProperty_DetailView" Index="1007">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="IFormattableProperty_Copy" Index="2" Caption="IFormattable Property" ShowCaption="False" IsNewNode="True">
+              <LayoutGroup Id="IFormattableProperty_col1" Index="0" ShowCaption="False" Direction="Horizontal" IsNewNode="True">
+                <LayoutItem Id="DisplayFormat" ViewItem="DisplayFormat" ShowCaption="" Index="0" IsNewNode="True" />
+                <LayoutItem Id="DisplayFormatString" ShowCaption="False" Index="1" ViewItem="DisplayFormatString" IsNewNode="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="IFormattableProperty_col2" Index="1" Direction="Horizontal" ShowCaption="False" IsNewNode="True">
+                <LayoutGroup Id="G2" Index="0" IsNewNode="True">
+                  <LayoutItem Id="EditMask" ViewItem="EditMask" ShowCaption="" Index="2" IsNewNode="True" />
+                </LayoutGroup>
+                <LayoutGroup Id="G1" Direction="Horizontal" IsNewNode="True">
+                  <LayoutItem Id="EditMaskType" ViewItem="EditMaskType" ShowCaption="False" Index="0" IsNewNode="True" />
+                  <LayoutItem Id="EditMaskString" ViewItem="EditMaskString" ShowCaption="False" Index="1" IsNewNode="True" />
+                </LayoutGroup>
+              </LayoutGroup>
+            </LayoutGroup>
+            <LayoutGroup Id="IFormattableProperty" Removed="True" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="IReferenceProperty_DetailView" Index="1008">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="IReferenceProperty">
+              <LayoutItem Id="LookupEditorMode" Removed="True" />
+            </LayoutGroup>
+            <LayoutGroup Id="IFilterOption" Removed="True">
+              <LayoutItem Id="Criteria" Removed="True" />
+              <LayoutItem Id="DataSourceCriteriaProperty" Removed="True" />
+              <LayoutItem Id="DataSourceProperty" Removed="True" />
+              <LayoutItem Id="PropertyType" ViewItem="PropertyType" IsNewNode="True" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="FlowChartEdge_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="FlowChartEdge">
+              <LayoutGroup Id="FlowChartEdge_col1">
+                <LayoutItem Id="FlowChartSettings" Removed="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="FlowChartMenuItem_DetailView">
+      <Items>
+        <PropertyEditor Id="EdgesWidth" PropertyName="FlowChartSettings.EdgesWidth" IsNewNode="True" />
+      </Items>
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="MenuItemBase" Index="0" Direction="Horizontal">
+              <LayoutItem Id="EdgesWidth" ViewItem="EdgesWidth" IsNewNode="True" />
+            </LayoutGroup>
+            <LayoutGroup Id="FlowChartMenuItem" Index="1">
+              <LayoutItem Id="FlowChartSettings" SizeConstraintsType="Custom" ShowCaption="False" />
+            </LayoutGroup>
+            <LayoutGroup Id="QuickDesign" IsNewNode="True">
+              <LayoutItem Id="QuickDesign" ViewItem="QuickDesign" IsNewNode="True" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="FlowChartNode_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="FlowChartNode">
+              <LayoutGroup Id="FlowChartNode_col1">
+                <LayoutItem Id="FlowChartSettins" Removed="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="IBusinessObject_DetailView">
+      <Items>
+        <PropertyEditor Id="Name" ImmediatePostData="True" />
+      </Items>
+      <Layout>
+        <LayoutGroup Id="Main">
+          <TabbedGroup Id="设置" Index="0" IsNewNode="True">
+            <LayoutGroup Id="基础信息" Index="0" IsNewNode="True">
+              <LayoutGroup Id="R1" Direction="Horizontal" Index="0" IsNewNode="True">
+                <LayoutItem Id="Name" ViewItem="Name" Index="0" IsNewNode="True" />
+                <LayoutItem Id="Caption" ViewItem="Caption" Index="1" IsNewNode="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="R2" Index="1" Direction="Horizontal" IsNewNode="True">
+                <LayoutItem Id="NavigationGroup" ViewItem="NavigationGroup" Index="1" IsNewNode="True" />
+                <LayoutItem Id="DefaultProperty" ViewItem="DefaultProperty" Index="2" IsNewNode="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="R3" Index="3" ShowCaption="False" Direction="Horizontal" IsNewNode="True" />
+            </LayoutGroup>
+            <LayoutGroup Id="默认视图" Index="1" IsNewNode="True">
+              <LayoutGroup Id="DefaultDetailView" Caption="默认详细视图" ShowCaption="True" Direction="Horizontal" IsNewNode="True">
+                <LayoutItem Id="DefaultDetailViewImage" ViewItem="DefaultDetailViewImage" IsNewNode="True" />
+                <LayoutItem Id="EditorSetup" ViewItem="EditorSetup" IsNewNode="True" />
+                <LayoutItem Id="ShowHelp" ViewItem="ShowHelp" IsNewNode="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="DefaultListView" Caption="默认列表视图" ShowCaption="True" Direction="Horizontal" IsNewNode="True">
+                <LayoutItem Id="DefaultListViewImage" ViewItem="DefaultListViewImage" Index="0" IsNewNode="True" />
+                <LayoutItem Id="DefaultListViewAllowEdit" ViewItem="DefaultListViewAllowEdit" IsNewNode="True" />
+                <LayoutItem Id="DefaultListViewShowAutoFilterRow" ViewItem="DefaultListViewShowAutoFilterRow" IsNewNode="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="DefaultListViewGroup" Direction="Horizontal" IsNewNode="True">
+                <LayoutItem Id="DefaultLookupEditorMode" ViewItem="DefaultLookupEditorMode" Index="0" IsNewNode="True" />
+                <LayoutItem Id="DefaultListViewNewItemRowPosition" ViewItem="DefaultListViewNewItemRowPosition" IsNewNode="True" />
+                <LayoutItem Id="EditorType" ViewItem="EditorType" IsNewNode="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+            <LayoutGroup Id="高级" Index="2" IsNewNode="True">
+              <LayoutItem Id="Category" ViewItem="Category" Index="0" IsNewNode="True" />
+              <LayoutItem Id="IsCloneable" ViewItem="IsCloneable" Index="0" IsNewNode="True" />
+              <LayoutItem Id="IsCreatableItem" ViewItem="IsCreatableItem" Index="1" IsNewNode="True" />
+              <LayoutItem Id="IsAbstract" ViewItem="IsAbstract" Index="2" IsNewNode="True" />
+              <LayoutItem Id="IsVisibleInReports" ViewItem="IsVisibileInReports" Index="2" IsNewNode="True" />
+              <LayoutItem Id="CanInherits" ViewItem="CanInherits" Index="3" IsNewNode="True" />
+            </LayoutGroup>
+          </TabbedGroup>
+          <TabbedGroup Id="Tabs">
+            <LayoutGroup Id="Properties" Index="0" />
+            <LayoutGroup Id="Rules" Index="1" />
+            <LayoutGroup Id="Appearances" Index="2" />
+            <LayoutGroup Id="Bases" Index="3" />
+          </TabbedGroup>
+          <LayoutGroup Id="SimpleEditors" Removed="True">
+            <LayoutGroup Id="R1" Direction="Horizontal" Index="0" IsNewNode="True">
+              <LayoutItem Id="Name" ViewItem="Name" Index="0" IsNewNode="True" />
+              <LayoutItem Id="Caption" ViewItem="Caption" Index="1" IsNewNode="True" />
+              <LayoutItem Id="IsAbstract" ViewItem="IsAbstract" Index="2" IsNewNode="True" />
+              <LayoutItem Id="CanInherits" ViewItem="CanInherits" Index="3" IsNewNode="True" />
+            </LayoutGroup>
+            <LayoutGroup Id="R2" Index="1" Direction="Horizontal" IsNewNode="True">
+              <LayoutItem Id="Category" ViewItem="Category" Index="0" IsNewNode="True" />
+              <LayoutItem Id="NavigationGroup" ViewItem="NavigationGroup" Index="1" IsNewNode="True" />
+              <LayoutItem Id="DefaultProperty" ViewItem="DefaultProperty" Index="2" IsNewNode="True" />
+              <LayoutItem Id="Empty" ViewItem="Icon" IsNewNode="True" />
+            </LayoutGroup>
+            <LayoutGroup Id="IBusinessObject" Removed="True">
+              <LayoutGroup Id="IBusinessObject_col1" Removed="True">
+                <LayoutItem Id="CanInherits" Removed="True" />
+                <LayoutItem Id="Category" Removed="True" />
+                <LayoutItem Id="NavigationGroup" Removed="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="IBusinessObject_col2" Removed="True">
+                <LayoutItem Id="Caption" Removed="True" />
+                <LayoutItem Id="DefaultProperty" Removed="True" />
+                <LayoutItem Id="IsAbstract" Removed="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+            <LayoutGroup Id="ICaption">
+              <LayoutItem Id="@d4bc257d-e32d-438f-b0b4-e81193f0d230" ViewItem="Item" IsNewNode="True" />
+              <LayoutItem Id="Caption" Removed="True" />
+            </LayoutGroup>
+            <LayoutGroup Id="IName" Removed="True">
+              <LayoutItem Id="Name" Removed="True" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="IBusinessObject_ListView" Caption="业务对象">
+      <HiddenActions>
+        <ActionLink ActionId="New" IsNewNode="True" />
+      </HiddenActions>
+    </ListView>
+    <ListView Id="IBusinessObject_Properties_ListView" AllowEdit="True" NewItemRowPosition="Top" />
+    <ListView Id="IBusinessObjectBase_LookupListView">
+      <Columns>
+        <ColumnInfo Id="Caption" PropertyName="Caption" Index="1" IsNewNode="True" />
+        <ColumnInfo Id="Index" PropertyName="Index" SortIndex="0" SortOrder="Descending" IsNewNode="True" />
+      </Columns>
+      <Sorting>
+        <SortProperty Id="IndexSort" PropertyName="Index" Direction="Descending" IsNewNode="True" />
+      </Sorting>
+    </ListView>
+    <DetailView Id="IFormCreator_DetailView">
+      <Items>
+        <PropertyEditor Id="Caption" ImmediatePostData="True" />
+        <PropertyEditor Id="Name" ImmediatePostData="True" />
+      </Items>
+      <Layout>
+        <LayoutGroup Id="单据设置" Index="0" IsNewNode="True">
+          <LayoutItem Id="Name" ViewItem="Name" Index="0" IsNewNode="True" />
+          <LayoutItem Id="Caption" ViewItem="Caption" Index="1" IsNewNode="True" />
+          <LayoutItem Id="ItemInfo" ViewItem="ItemInfo" IsNewNode="True" />
+          <LayoutItem Id="SelectExistItemBusinessObject" ViewItem="SelectExistItemBusinessObject" IsNewNode="True" />
+        </LayoutGroup>
+        <LayoutGroup Id="Main" Removed="True">
+          <LayoutGroup Id="SimpleEditors" Removed="True">
+            <LayoutGroup Id="ICaption">
+              <LayoutItem Id="Caption" Removed="True" />
+            </LayoutGroup>
+            <LayoutGroup Id="IFormCreator">
+              <LayoutItem Id="FormItem" Removed="True" />
+            </LayoutGroup>
+            <LayoutGroup Id="IName">
+              <LayoutItem Id="Name" Removed="True" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="ImportDataSolution_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="ImportDataSolution">
+              <LayoutItem Id="ExcelFileOption" ShowCaption="False" />
+              <LayoutItem Id="BusinessObject" Removed="True" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="IProperty_DetailView">
+      <Items>
+        <PropertyEditor Id="Name" ImmediatePostData="True" />
+      </Items>
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="Rules_Group" Removed="True" />
+          <LayoutGroup Id="SimpleEditors" Removed="True">
+            <LayoutGroup Id="ICaption" Removed="True" />
+            <LayoutGroup Id="IName" Removed="True" />
+            <LayoutGroup Id="IProperty" Removed="True" />
+          </LayoutGroup>
+          <TabbedGroup Id="Tabs" Caption="" IsNewNode="True">
+            <LayoutGroup Id="BaseInfo" Caption="基本设置" Index="0" IsNewNode="True">
+              <LayoutGroup Id="IProperty" Index="0" Direction="Horizontal" ShowCaption="False" IsNewNode="True">
+                <LayoutGroup Id="IProperty_col1" Index="0" ShowCaption="False" IsNewNode="True">
+                  <LayoutItem Id="Name" ViewItem="Name" Index="0" IsNewNode="True" />
+                  <LayoutItem Id="TypeCategory" ViewItem="TypeCategory" Index="1" IsNewNode="True" />
+                  <LayoutItem Id="PropertyEditor" ViewItem="PropertyEditor" Index="3" IsNewNode="True" />
+                  <LayoutItem Id="ToolTip" ViewItem="ToolTip" Index="3" IsNewNode="True" />
+                  <LayoutItem Id="ReadOnly" ViewItem="ReadOnly" Index="5" IsNewNode="True" />
+                </LayoutGroup>
+                <LayoutGroup Id="IProperty_col2" Index="1" ShowCaption="False" IsNewNode="True">
+                  <LayoutItem Id="Caption" ViewItem="Caption" Index="0" IsNewNode="True" />
+                  <LayoutItem Id="PropertyType" ViewItem="PropertyType" Index="1" IsNewNode="True" />
+                  <LayoutItem Id="Expression" ViewItem="Expression" Index="2" IsNewNode="True" />
+                  <LayoutItem Id="Index" ViewItem="Index" Index="3" IsNewNode="True" />
+                  <LayoutItem Id="ImmediatePostData" ViewItem="ImmediatePostData" Index="4" IsNewNode="True" />
+                </LayoutGroup>
+              </LayoutGroup>
+              <LayoutGroup Id="Rules_Group" Index="3" Direction="Horizontal" ShowCaption="True" IsNewNode="True">
+                <LayoutItem Id="Rules" ViewItem="Rules" Index="0" IsNewNode="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+            <LayoutGroup Id="扩展设置" Index="1" IsNewNode="True">
+              <LayoutItem Id="ExtendSetting" ViewItem="ExtendSetting" Index="3" IsNewNode="True" />
+            </LayoutGroup>
+          </TabbedGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="IPropertyEditorInfo_DetailView">
+      <Layout>
+        <LayoutGroup Id="R1" Index="0" Direction="Horizontal" IsNewNode="True">
+          <LayoutGroup Id="C1" Index="1" IsNewNode="True">
+            <LayoutItem Id="Caption" ViewItem="Caption" Index="0" IsNewNode="True" />
+            <LayoutItem Id="ToolTip" ViewItem="ToolTip" Index="1" IsNewNode="True" />
+            <LayoutItem Id="PropertyEditorType" ViewItem="PropertyEditorType" Index="11" IsNewNode="True" />
+          </LayoutGroup>
+          <LayoutGroup Id="C2" Index="2" IsNewNode="True">
+            <LayoutItem Id="Index" ViewItem="Index" Index="0" IsNewNode="True" />
+            <LayoutItem Id="AllowEdit" ViewItem="AllowEdit" Index="1" IsNewNode="True" />
+            <LayoutItem Id="ImmediatePostData" ViewItem="ImmediatePostData" Index="2" IsNewNode="True" />
+          </LayoutGroup>
+        </LayoutGroup>
+        <LayoutGroup Id="Main" Index="1" Removed="True">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="IViewItemSetup" Index="0">
+              <LayoutItem Id="Caption" Removed="True" />
+              <LayoutItem Id="Index" Removed="True" />
+              <LayoutItem Id="ToolTip" Removed="True" />
+            </LayoutGroup>
+            <LayoutGroup Id="IPropertyEditorInfo" Index="1">
+              <LayoutGroup Id="IPropertyEditorInfo_col1">
+                <LayoutItem Id="AllowClear" Removed="True" />
+                <LayoutItem Id="DataSourceCriteria" Removed="True" />
+                <LayoutItem Id="DataSourceCriteriaProperty" Removed="True" />
+                <LayoutItem Id="DataSourceProperty" Removed="True" />
+                <LayoutItem Id="ImageEditorCustomHeight" Removed="True" />
+                <LayoutItem Id="ImageEditorFixedHeight" Removed="True" />
+                <LayoutItem Id="ImageEditorFixedWidth" Removed="True" />
+                <LayoutItem Id="ImageEditorMode" Removed="True" />
+                <LayoutItem Id="ImageSizeMode" Removed="True" />
+                <LayoutItem Id="IsPassword" Removed="True" />
+                <LayoutItem Id="LookupEditorMode" Removed="True" />
+                <LayoutItem Id="LookupProperty" Removed="True" />
+                <LayoutItem Id="MaxLength" Removed="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="IPropertyEditorInfo_col2">
+                <LayoutItem Id="AllowEdit" Removed="True" />
+                <LayoutItem Id="CaptionForFalse" Removed="True" />
+                <LayoutItem Id="CaptionForTrue" Removed="True" />
+                <LayoutItem Id="DisplayFormat" Removed="True" />
+                <LayoutItem Id="EditMask" Removed="True" />
+                <LayoutItem Id="EditMaskType" Removed="True" />
+                <LayoutItem Id="ImageForFalse" Removed="True" />
+                <LayoutItem Id="ImageForTrue" Removed="True" />
+                <LayoutItem Id="ImmediatePostData" Removed="True" />
+                <LayoutItem Id="PredefinedValues" Removed="True" />
+                <LayoutItem Id="PropertyEditorType" Removed="True" />
+                <LayoutItem Id="RowCount" Removed="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+        <LayoutGroup Id="R2" Index="1" Direction="Horizontal" IsNewNode="True">
+          <LayoutItem Id="DataSourceCriteriaProperty" ViewItem="DataSourceCriteriaProperty" Index="0" IsNewNode="True" />
+          <LayoutItem Id="DataSourceProperty" ViewItem="DataSourceProperty" Index="1" IsNewNode="True" />
+          <LayoutItem Id="DataSourceCriteria" ViewItem="DataSourceCriteria" Index="2" IsNewNode="True" />
+        </LayoutGroup>
+        <LayoutGroup Id="R21" Index="2" Direction="Horizontal" IsNewNode="True">
+          <LayoutItem Id="LookupEditorMode" ViewItem="LookupEditorMode" Index="3" IsNewNode="True" />
+          <LayoutItem Id="LookupProperty" ViewItem="LookupProperty" Index="4" IsNewNode="True" />
+          <LayoutItem Id="AllowClear" ViewItem="AllowClear" Index="5" IsNewNode="True" />
+        </LayoutGroup>
+        <LayoutGroup Id="R3" Index="3" Direction="Horizontal" IsNewNode="True">
+          <LayoutItem Id="ImageEditorCustomHeight" ViewItem="ImageEditorCustomHeight" Index="6" IsNewNode="True" />
+          <LayoutItem Id="ImageEditorFixedHeight" ViewItem="ImageEditorFixedHeight" Index="7" IsNewNode="True" />
+          <LayoutItem Id="ImageEditorFixedWidth" ViewItem="ImageEditorFixedWidth" Index="8" IsNewNode="True" />
+        </LayoutGroup>
+        <LayoutGroup Id="R31" Index="4" Direction="Horizontal" IsNewNode="True">
+          <LayoutItem Id="ImageEditorMode" ViewItem="ImageEditorMode" Index="9" IsNewNode="True" />
+          <LayoutItem Id="ImageSizeMode" ViewItem="ImageSizeMode" Index="10" IsNewNode="True" />
+        </LayoutGroup>
+        <LayoutGroup Id="R4" Index="5" Direction="Horizontal" IsNewNode="True">
+          <LayoutItem Id="PredefinedValues" ViewItem="PredefinedValues" Index="0" IsNewNode="True" />
+          <LayoutItem Id="RowCount" ViewItem="RowCount" Index="1" IsNewNode="True" />
+        </LayoutGroup>
+        <LayoutGroup Id="R41" Index="6" Direction="Horizontal" IsNewNode="True">
+          <LayoutItem Id="MaxLength" ViewItem="MaxLength" Index="11" IsNewNode="True" />
+          <LayoutItem Id="IsPassword" ViewItem="IsPassword" Index="12" IsNewNode="True" />
+        </LayoutGroup>
+        <LayoutGroup Id="R5" Index="7" Direction="Horizontal" IsNewNode="True">
+          <LayoutItem Id="CaptionForFalse" ViewItem="CaptionForFalse" Index="3" IsNewNode="True" />
+          <LayoutItem Id="CaptionForTrue" ViewItem="CaptionForTrue" Index="4" IsNewNode="True" />
+        </LayoutGroup>
+        <LayoutGroup Id="R51" Direction="Horizontal" IsNewNode="True">
+          <LayoutItem Id="ImageForFalse" ViewItem="ImageForFalse" Index="5" IsNewNode="True" />
+          <LayoutItem Id="ImageForTrue" ViewItem="ImageForTrue" Index="6" IsNewNode="True" />
+        </LayoutGroup>
+        <LayoutGroup Id="R6" Direction="Horizontal" IsNewNode="True">
+          <LayoutItem Id="DisplayFormat" ViewItem="DisplayFormat" Index="7" IsNewNode="True" />
+          <LayoutItem Id="EditMask" ViewItem="EditMask" Index="8" IsNewNode="True" />
+          <LayoutItem Id="EditMaskType" ViewItem="EditMaskType" Index="9" IsNewNode="True" />
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DashboardView Id="产品管理" IsNewNode="True">
+      <Layout IsNewNode="True">
+        <LayoutGroup Id="Main" Direction="Horizontal" ToolTip="" IsNewNode="True">
+          <LayoutItem Id="产品分类" ViewItem="产品分类" Index="0" MinSize="300, 0" MaxSize="400, 0" RelativeSize="10" IsNewNode="True" />
+          <LayoutItem Id="产品管理" ViewItem="产品管理" Index="1" IsNewNode="True" />
+        </LayoutGroup>
+      </Layout>
+    </DashboardView>
+  </Views>
+</Application>

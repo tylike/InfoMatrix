@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <DashboardView Id="产品管理">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutItem Id="产品管理" ViewItem="产品管理" />
+          <LayoutItem Id="产品分类" ViewItem="产品分类" />
+        </LayoutGroup>
+      </Layout>
+    </DashboardView>
+  </Views>
+</Application>

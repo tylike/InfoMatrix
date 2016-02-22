@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application ProtectedContentText="无权查看" Title="IMatrix" VersionFormat="版本 {0}.{1}.{2}">
+  <SchemaModules>
+    <SchemaModule Name="CloneObjectModule" Version="15.1.7.0" IsNewNode="True" />
+    <SchemaModule Name="SchedulerAspNetModule" Version="15.1.7.0" IsNewNode="True" />
+    <SchemaModule Name="SchedulerModuleBase" Version="15.1.7.0" IsNewNode="True" />
+    <SchemaModule Name="SystemAspNetModule" Version="15.1.7.0" IsNewNode="True" />
+    <SchemaModule Name="SystemModule" Version="15.1.7.0" IsNewNode="True" />
+  </SchemaModules>
+  <Views>
+    <DetailView Id="AddNode_DetailView">
+      <Items>
+        <PropertyEditor Id="Node" PropertyEditorType="DevExpress.ExpressApp.Editors.DetailPropertyEditor" />
+      </Items>
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="AddNode" ShowCaption="True" ImageName="Action_Clear_Settings">
+              <LayoutItem Id="NodeType" ShowCaption="False" />
+              <LayoutItem Id="Node" Removed="True" />
+            </LayoutGroup>
+            <LayoutGroup Id="Setup" Caption="详细设置" ShowCaption="True" ImageName="BO_List" IsNewNode="True">
+              <LayoutItem Id="Node" ViewItem="Node" ShowCaption="False" Index="1" IsNewNode="True" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="FlowChartFormNode_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="FlowChartNode" ShowCaption="False">
+              <LayoutGroup Id="FlowChartNode_col1">
+                <LayoutItem Id="FlowChartSettins" Removed="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="IFormCreator_ItemInfo_ListView" AllowEdit="True" NewItemRowPosition="Top">
+      <Columns>
+        <ColumnInfo Id="Name" Index="0" />
+        <ColumnInfo Id="Caption" Index="1" />
+        <ColumnInfo Id="PropertyType" Index="2" />
+      </Columns>
+    </ListView>
+    <DetailView Id="IProperty_DetailView">
+      <Items>
+        <PropertyEditor Id="ExtendSetting" PropertyEditorType="DevExpress.ExpressApp.Editors.DetailPropertyEditor" />
+      </Items>
+    </DetailView>
+    <ListView Id="MasterObject_Childrens_ListView" EditorTypeName="Admiral.ERP.Module.Web.Editors.MultiEditASPxGridListEditor" NewItemRowPosition="Bottom" />
+  </Views>
+</Application>

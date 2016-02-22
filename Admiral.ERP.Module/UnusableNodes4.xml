@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <DashboardView Id="产品管理">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutItem Id="产品管理" ViewItem="产品管理" />
+          <LayoutItem Id="产品分类" ViewItem="产品分类" />
+        </LayoutGroup>
+      </Layout>
+    </DashboardView>
+    <DetailView Id="FlowChartMenuItem_DetailView">
+      <Items Id="Items">
+        <PropertyEditor Id="QuickDesign" PropertyName="FlowChartSettings.QuickDesign" />
+      </Items>
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="QuickDesign">
+              <LayoutItem Id="QuickDesign" ViewItem="QuickDesign" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+  </Views>
+</Application>

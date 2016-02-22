@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <DashboardView Id="产品管理">
+      <Items Id="Items">
+        <DashboardViewItem Id="产品分类" ViewId="IProductCateory_ListView" />
+      </Items>
+    </DashboardView>
+    <ListView Id="IProductCateory_ListView_ProductManager" ClassName="Admiral.ERP.Module.BusinessObjects.IProductCateory">
+      <Columns Id="Columns">
+        <ColumnInfo Id="Name" PropertyName="Name" Width="400" SortIndex="0" SortOrder="Ascending" Index="0" />
+      </Columns>
+    </ListView>
+  </Views>
+</Application>

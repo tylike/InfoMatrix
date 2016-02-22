@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <ListView Id="IAddress_ListView" AllowEdit="True" NewItemRowPosition="Top" IsFooterVisible="True" Filter="[BetterAddresses] Like '%k%'">
+      <Columns Id="Columns">
+        <ColumnInfo Id="Cateory" Width="62" />
+        <ColumnInfo Id="Country" Width="63" />
+        <ColumnInfo Id="Province" Width="66" />
+        <ColumnInfo Id="City" Width="40" />
+        <ColumnInfo Id="Area" Width="45" />
+        <ColumnInfo Id="Town" Width="52" />
+        <ColumnInfo Id="BetterAddresses" Width="110" />
+      </Columns>
+    </ListView>
+    <ListView Id="IProduct_ListView" EditorTypeName="DevExpress.ExpressApp.Web.Editors.ASPx.ASPxGridListEditor" />
+  </Views>
+</Application>

@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <BOModel Id="BOModel">
+    <Class Name="Admiral.ERP.Module.BusinessObjects.IAddress" ImageName="BO_Address" />
+    <Class Name="Admiral.ERP.Module.BusinessObjects.IAddressCategory" ImageName="BO_Category" />
+    <Class Name="Admiral.ERP.Module.BusinessObjects.IArea" ImageName="BO_Address" />
+    <Class Name="Admiral.ERP.Module.BusinessObjects.ICountry" ImageName="BO_Country_v92" />
+    <Class Name="Admiral.ERP.Module.BusinessObjects.IDeliveryOrder" ImageName="BO_Order" />
+    <Class Name="Admiral.ERP.Module.BusinessObjects.IFormItemBase" ImageName="BO_Order_Item" />
+    <Class Name="Admiral.ERP.Module.BusinessObjects.INotice" ImageName="ReminderNotifications" />
+    <Class Name="Admiral.ERP.Module.BusinessObjects.IOrder" ImageName="BO_Order" />
+    <Class Name="Admiral.ERP.Module.BusinessObjects.IPerson" ImageName="BO_Person" />
+    <Class Name="Admiral.ERP.Module.BusinessObjects.IPlan" ImageName="BO_Scheduler" />
+    <Class Name="Admiral.ERP.Module.BusinessObjects.IProduct" ImageName="BO_Product" />
+    <Class Name="Admiral.ERP.Module.BusinessObjects.PMS.IPmsDeliverOrder" ImageName="0015" />
+    <Class Name="Admiral.ERP.Module.BusinessObjects.PMS.IPmsNotice" ImageName="0024" />
+    <Class Name="Admiral.ERP.Module.BusinessObjects.PMS.IPmsOrder" ImageName="0014" />
+    <Class Name="Admiral.ERP.Module.BusinessObjects.PMS.IPmsPlan" ImageName="0002" />
+    <Class Name="Admiral.ERP.Module.BusinessObjects.PMS.IPmsRequest" ImageName="0010" />
+    <Class Name="Admiral.ERP.Module.BusinessObjects.PMS.IPmsWarehousingEntry" ImageName="0037" />
+    <Class Name="Admiral.ERP.Module.BusinessObjects.QMS.IQmsReport" ImageName="0047" />
+    <Class Name="Admiral.ERP.Module.BusinessObjects.QMS.IQmsRequest" ImageName="0019" />
+    <Class Name="Admiral.ERP.Module.BusinessObjects.QMS.IQmsUnqualified" ImageName="0029" />
+  </BOModel>
+  <Views Id="Views">
+    <DetailView Id="ProductSelector_DetailView">
+      <Items Id="Items">
+        <PropertyEditor Id="Directory" View="IPmsProductDirectory_ListView" />
+        <PropertyEditor Id="Products" View="IProduct_ListView" />
+      </Items>
+    </DetailView>
+    <DashboardView Id="产品管理">
+      <Items Id="Items">
+        <DashboardViewItem Id="产品管理" ViewId="IProduct_ListView" />
+        <DashboardViewItem Id="产品分类" ViewId="IProductCategory_ListView_Manager" />
+      </Items>
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutItem Id="产品管理" ViewItem="产品管理" />
+        </LayoutGroup>
+      </Layout>
+    </DashboardView>
+    <ListView Id="IProductCategory_ListView_Manager" ClassName="Admiral.ERP.Module.BusinessObjects.IProductCategory">
+      <Columns Id="Columns">
+        <ColumnInfo Id="Name" PropertyName="Name" Width="400" SortIndex="0" SortOrder="Ascending" Index="0" />
+      </Columns>
+    </ListView>
+  </Views>
+</Application>

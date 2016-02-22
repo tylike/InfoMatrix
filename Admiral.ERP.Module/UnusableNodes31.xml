@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <DashboardView Id="产品管理">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutItem Id="产品管理" ViewItem="产品管理" />
+          <LayoutItem Id="产品分类" ViewItem="产品分类" />
+        </LayoutGroup>
+      </Layout>
+    </DashboardView>
+    <DetailView Id="FlowChartMenuItem_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="QuickDesign">
+              <LayoutItem Id="QuickDesign" ViewItem="QuickDesign" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="IStringProperty_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="IFormattableProperty" Direction="Vertical" Index="3">
+              <LayoutGroup Id="R1" Direction="Horizontal" Index="0">
+                <LayoutItem Id="DisplayFormat" ViewItem="DisplayFormat" Index="0" />
+                <LayoutItem Id="DisplayFormatString" ViewItem="DisplayFormatString" ShowCaption="False" Index="1" />
+              </LayoutGroup>
+              <LayoutGroup Id="R2" Direction="Horizontal" Index="1">
+                <LayoutGroup Id="G1" Index="0">
+                  <LayoutItem Id="EditMask" ViewItem="EditMask" Index="2" />
+                </LayoutGroup>
+                <LayoutGroup Id="G" Direction="Horizontal">
+                  <LayoutItem Id="EditMaskType" ViewItem="EditMaskType" ShowCaption="False" Index="0" />
+                  <LayoutItem Id="EditMaskString" ViewItem="EditMaskString" ShowCaption="False" Index="1" />
+                </LayoutGroup>
+              </LayoutGroup>
+              <LayoutItem Id="IsPassword" ViewItem="IsPassword" Index="2" />
+              <LayoutItem Id="PredefinedValues" ViewItem="PredefinedValues" Index="5" />
+              <LayoutGroup Id="IFormattableProperty_col1" Removed="True">
+                <LayoutItem Id="DisplayFormat" Removed="True" />
+                <LayoutItem Id="DisplayFormatString" Removed="True" />
+                <LayoutItem Id="EditMask" Removed="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="IFormattableProperty_col2" Removed="True">
+                <LayoutItem Id="EditMaskString" Removed="True" />
+                <LayoutItem Id="EditMaskType" Removed="True" />
+              </LayoutGroup>
+              <LayoutItem Id="RowCount" ViewItem="RowCount" />
+              <LayoutItem Id="Size" ViewItem="Size" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="IRuleRequiredInfo_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="IRuleCollectionPropertyInfo">
+              <LayoutGroup Id="TargetCollectionProperties">
+                <LayoutItem Id="TargetCollectionPropertyName" ViewItem="TargetCollectionPropertyName" />
+                <LayoutItem Id="TargetCollectionOwnerType" ViewItem="TargetCollectionOwnerType" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+  </Views>
+</Application>

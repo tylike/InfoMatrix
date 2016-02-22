@@ -1,0 +1,225 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Admiral.ERP.Module.BusinessObjects.SYS.BusinessObjectLogic">
+    <Position X="1" Y="1" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAIAAAAAAAIAAAIAAAgBAAgAACAAAAAA=</HashCode>
+      <FileName>BusinessObjects\SYS\BusinessBuilder\IBusinessObject.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="Admiral.ERP.Module.BusinessObjects.SYS.IBusinessObject" Collapsed="true">
+    <Position X="5" Y="3.75" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AgSAAECIABAAAAAAABAEAASgAAiQKAAEARgADQECDAA=</HashCode>
+      <FileName>BusinessObjects\SYS\BusinessBuilder\IBusinessObject.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Appearances" />
+      <Property Name="Rules" />
+    </ShowAsCollectionAssociation>
+  </Interface>
+  <Interface Name="Admiral.ERP.Module.BusinessObjects.SYS.IHelpInfo" Collapsed="true">
+    <Position X="6.5" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAAAEAAgAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BusinessObjects\SYS\BusinessBuilder\IBusinessObject.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Admiral.ERP.Module.BusinessObjects.SYS.IViewItemSetup" Collapsed="true">
+    <Position X="4.25" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAgAAAAAgAAAAAAAAACAEAAAAAAAA=</HashCode>
+      <FileName>BusinessObjects\SYS\BusinessBuilder\IBusinessObject.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Admiral.ERP.Module.BusinessObjects.SYS.IProperty" Collapsed="true">
+    <Position X="16.5" Y="4.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAA=</HashCode>
+      <FileName>BusinessObjects\SYS\BusinessBuilder\IProperty.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Admiral.ERP.Module.BusinessObjects.SYS.IBooleanProperty" Collapsed="true">
+    <Position X="8.75" Y="6.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAEAAAAAAAAAAAAAAAAQAAAAAEAgAAAAAAA=</HashCode>
+      <FileName>BusinessObjects\SYS\BusinessBuilder\IProperty.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Admiral.ERP.Module.BusinessObjects.SYS.INumberProperty" Collapsed="true">
+    <Position X="11.5" Y="6.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BusinessObjects\SYS\BusinessBuilder\IProperty.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Admiral.ERP.Module.BusinessObjects.SYS.IListProperty" Collapsed="true">
+    <Position X="14" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAABAAAAEAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BusinessObjects\SYS\BusinessBuilder\IProperty.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Admiral.ERP.Module.BusinessObjects.SYS.IDateTimeProperty" Collapsed="true">
+    <Position X="16.25" Y="6.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BusinessObjects\SYS\BusinessBuilder\IProperty.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Admiral.ERP.Module.BusinessObjects.SYS.IStringProperty" Collapsed="true">
+    <Position X="18.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEAAgAAAAAAAAAAAAAAAAAAAAAABAAAAAgA=</HashCode>
+      <FileName>BusinessObjects\SYS\BusinessBuilder\IProperty.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Admiral.ERP.Module.BusinessObjects.SYS.IReferenceProperty" Collapsed="true">
+    <Position X="20.75" Y="6.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAABQAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BusinessObjects\SYS\BusinessBuilder\IProperty.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Admiral.ERP.Module.BusinessObjects.SYS.IColorProperty" Collapsed="true">
+    <Position X="23" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BusinessObjects\SYS\BusinessBuilder\IProperty.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Admiral.ERP.Module.BusinessObjects.SYS.IImageProperty" Collapsed="true">
+    <Position X="25.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BusinessObjects\SYS\BusinessBuilder\IProperty.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Admiral.ERP.Module.BusinessObjects.IName" Collapsed="true">
+    <Position X="15.75" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BusinessObjects\Base\IName.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Admiral.ERP.Module.BusinessObjects.ICaption" Collapsed="true">
+    <Position X="18" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAA=</HashCode>
+      <FileName>BusinessObjects\Base\ICaption.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Admiral.ERP.Module.BusinessObjects.SYS.IAppearanceRule" Collapsed="true">
+    <Position X="11.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAMAAAgAAAoEEAAAAAAAAAAACAAAAAAAAAAgBAAA=</HashCode>
+      <FileName>BusinessObjects\SYS\BusinessBuilder\IAppearanceRule.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Admiral.ERP.Module.BusinessObjects.SYS.IRuleInfoBase" Collapsed="true">
+    <Position X="9.5" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAIAAAAgAgAABAAAAAAAQAAAAAAEAAgAAEgQAAAAA=</HashCode>
+      <FileName>BusinessObjects\SYS\Validation\ValidationRule.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Admiral.ERP.Module.BusinessObjects.SYS.IRuleCriteriaInfo" Collapsed="true">
+    <Position X="9.25" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAACAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BusinessObjects\SYS\Validation\ValidationRule.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Admiral.ERP.Module.BusinessObjects.SYS.IRuleCombinationOfPropertiesIsUniqueInfo" Collapsed="true">
+    <Position X="11.5" Y="11" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAA=</HashCode>
+      <FileName>BusinessObjects\SYS\Validation\ValidationRule.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Admiral.ERP.Module.BusinessObjects.SYS.IRulePropertyValueInfoBase" Collapsed="true">
+    <Position X="22.5" Y="10.75" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BusinessObjects\SYS\Validation\ValidationRule.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Admiral.ERP.Module.BusinessObjects.SYS.IRuleIsReferencedInfo" Collapsed="true">
+    <Position X="7.5" Y="14" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAAAAAAAAAAAAAABAAAAAAAAEAAAAAAAAAAAA=</HashCode>
+      <FileName>BusinessObjects\SYS\Validation\ValidationRule.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Admiral.ERP.Module.BusinessObjects.SYS.IRuleObjectExistsInfo" Collapsed="true">
+    <Position X="9.75" Y="14" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAAAAAAAAAABAAAAAAAAAAEAAAAAAAAAA=</HashCode>
+      <FileName>BusinessObjects\SYS\Validation\ValidationRule.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Admiral.ERP.Module.BusinessObjects.SYS.IRuleRequiredInfo" Collapsed="true">
+    <Position X="12" Y="14" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BusinessObjects\SYS\Validation\ValidationRule.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Admiral.ERP.Module.BusinessObjects.SYS.IRuleUniqueValueInfo" Collapsed="true">
+    <Position X="14.5" Y="14" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BusinessObjects\SYS\Validation\ValidationRule.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Admiral.ERP.Module.BusinessObjects.SYS.IRuleRegularExpressionInfo" Collapsed="true">
+    <Position X="16.75" Y="14" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAgAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BusinessObjects\SYS\Validation\ValidationRule.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Admiral.ERP.Module.BusinessObjects.SYS.IRuleStringComparisonInfo" Collapsed="true">
+    <Position X="19" Y="14" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAABiAACAAAAAAEAAAAAAAAAAAAAIAAAAAAAAAAAQ=</HashCode>
+      <FileName>BusinessObjects\SYS\Validation\ValidationRule.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Admiral.ERP.Module.BusinessObjects.SYS.IRuleRangeInfo" Collapsed="true">
+    <Position X="21.25" Y="14" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAUAAAQAAQAAAAAAAEAAAAAAAAAA=</HashCode>
+      <FileName>BusinessObjects\SYS\Validation\ValidationRule.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Admiral.ERP.Module.BusinessObjects.SYS.IRuleFromBoolPropertyInfo" Collapsed="true">
+    <Position X="25.5" Y="14" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAA=</HashCode>
+      <FileName>BusinessObjects\SYS\Validation\ValidationRule.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Admiral.ERP.Module.BusinessObjects.SYS.IRuleValueComparisonInfo" Collapsed="true">
+    <Position X="28.75" Y="14" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>BAAAEJAAAAAAAAAABAgAAAAAAAgAIAAAABAAAAAAAAA=</HashCode>
+      <FileName>BusinessObjects\SYS\Validation\ValidationRule.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Admiral.ERP.Module.BusinessObjects.SYS.IRuleSupportsCollectionAggregatesInfo" Collapsed="true">
+    <Position X="17" Y="11.5" Width="3.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BusinessObjects\SYS\Validation\ValidationRule.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Admiral.ERP.Module.BusinessObjects.ICategoryBase" Collapsed="true">
+    <Position X="9.25" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BusinessObjects\Base\ICategoryBase.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="微软雅黑" Size="9" />
+</ClassDiagram>

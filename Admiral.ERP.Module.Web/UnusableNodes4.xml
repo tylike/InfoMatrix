@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <NavigationItems Id="NavigationItems">
+    <Items Id="Items">
+      <Item Id="Default">
+        <Items Id="Items">
+          <Item Id="TestPropertyType_ListView" ImageName="0001" />
+        </Items>
+      </Item>
+    </Items>
+  </NavigationItems>
+</Application>

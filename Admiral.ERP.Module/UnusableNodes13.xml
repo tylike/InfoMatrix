@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <DetailView Id="AddationInfo_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main" Removed="True">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="AddationInfo">
+              <LayoutItem Id="Help" Removed="True" />
+              <LayoutItem Id="ViewItem" Removed="True" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+        <TabbedGroup Id="Tabs">
+          <LayoutGroup Id="Setup" Index="0">
+            <LayoutItem Id="ViewItem" ViewItem="ViewItem" Index="1" />
+          </LayoutGroup>
+          <LayoutGroup Id="Help">
+            <LayoutItem Id="Help" ViewItem="Help" Index="0" />
+          </LayoutGroup>
+        </TabbedGroup>
+      </Layout>
+    </DetailView>
+    <DashboardView Id="产品管理">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutItem Id="产品管理" ViewItem="产品管理" />
+          <LayoutItem Id="产品分类" ViewItem="产品分类" />
+        </LayoutGroup>
+      </Layout>
+    </DashboardView>
+    <DetailView Id="FlowChartMenuItem_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="QuickDesign">
+              <LayoutItem Id="QuickDesign" ViewItem="QuickDesign" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="IBusinessObject_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="ICaption">
+              <LayoutItem Id="@d4bc257d-e32d-438f-b0b4-e81193f0d230" ViewItem="Item" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="IRuleRequiredInfo_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="IRuleCollectionPropertyInfo">
+              <LayoutGroup Id="TargetCollectionProperties">
+                <LayoutItem Id="TargetCollectionPropertyName" ViewItem="TargetCollectionPropertyName" />
+                <LayoutItem Id="TargetCollectionOwnerType" ViewItem="TargetCollectionOwnerType" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+  </Views>
+</Application>

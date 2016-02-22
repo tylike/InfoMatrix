@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <SchemaModules>
+    <SchemaModule Name="CloneObjectModule" Version="15.2.4.0" IsNewNode="True" />
+    <SchemaModule Name="SchedulerAspNetModule" Version="15.2.4.0" IsNewNode="True" />
+    <SchemaModule Name="SchedulerModuleBase" Version="15.2.4.0" IsNewNode="True" />
+    <SchemaModule Name="SystemAspNetModule" Version="15.2.4.0" IsNewNode="True" />
+    <SchemaModule Name="SystemModule" Version="15.2.4.0" IsNewNode="True" />
+  </SchemaModules>
+  <Views>
+    <ListView Id="Event_ListView" TimeScale="00:05:00" SelectedIntervalStart="2016-02-03" SelectedIntervalEnd="2016-02-04" />
+    <ListView Id="IBusinessObject_Bases_ListView">
+      <Columns>
+        <ColumnInfo Id="Name" SortIndex="1" />
+      </Columns>
+    </ListView>
+    <ListView Id="IBusinessObject_ListView">
+      <Columns>
+        <ColumnInfo Id="Name" SortIndex="1" />
+      </Columns>
+    </ListView>
+    <ListView Id="ISimpleType_ListView">
+      <Columns>
+        <ColumnInfo Id="Name" SortIndex="-1" SortOrder="None" />
+        <ColumnInfo Id="Index" SortIndex="0" SortOrder="Descending" />
+      </Columns>
+    </ListView>
+  </Views>
+</Application>

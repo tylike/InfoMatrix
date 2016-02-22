@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <BOModel Id="BOModel">
+    <Class Name="Admiral.ERP.Module.BusinessObjects.CRM.ISmsDeliveryOrder" ImageName="0001" />
+    <Class Name="Admiral.ERP.Module.BusinessObjects.CRM.ISmsDeliveryOrderQCReport" ImageName="0018" />
+    <Class Name="Admiral.ERP.Module.BusinessObjects.CRM.ISmsDeliveryOrderQCRequest" ImageName="0027" />
+    <Class Name="Admiral.ERP.Module.BusinessObjects.CRM.ISmsOrder" ImageName="0028" />
+    <Class Name="Admiral.ERP.Module.BusinessObjects.CRM.ISmsPlan" ImageName="0044" />
+    <Class Name="Admiral.ERP.Module.BusinessObjects.CRM.ISmsRequest" ImageName="0041" />
+    <Class Name="Admiral.ERP.Module.BusinessObjects.CRM.ISmsReturnOrder" ImageName="0034" />
+    <Class Name="Admiral.ERP.Module.BusinessObjects.CRM.ISmsWarehousingEntry" ImageName="0037" />
+    <Class Name="Admiral.ERP.Module.BusinessObjects.CRM.ISmsWarehousingEntryQCReport" ImageName="0023" />
+    <Class Name="Admiral.ERP.Module.BusinessObjects.CRM.ISmsWarehousingEntryQCRequest" ImageName="0028" />
+    <Class Name="Admiral.ERP.Module.BusinessObjects.ICustomerBase" ImageName="BO_Customer" />
+    <Class Name="Admiral.ERP.Module.BusinessObjects.IPersonCustomer" ImageName="BO_Customer" />
+  </BOModel>
+</Application>

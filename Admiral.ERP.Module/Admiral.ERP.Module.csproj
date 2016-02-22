@@ -1,0 +1,481 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5F15837D-D1E5-44DC-92F0-4F2EBE9C3F8D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Admiral.ERP.Module</RootNamespace>
+    <AssemblyName>Admiral.ERP.Module</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkProfile />
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'EasyTest|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\EasyTest\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;EASYTEST</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.ExpressApp.AuditTrail.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.Chart.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.CloneObject.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.ConditionalAppearance.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.Notifications.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.Objects.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.PivotChart.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.PivotGrid.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.Reports.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.ExpressApp.ReportsV2.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.Scheduler.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.Security.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.ExpressApp.TreeListEditors.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.Validation.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.ViewVariantsModule.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.Xpo.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Persistent.Base.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Persistent.BaseImpl.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.PivotGrid.v15.2.Core, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v15.2.Core">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Data.v15.2">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Xpo.v15.2">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Charts.v15.2.Core, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v15.2.Wizard, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Sparkline.v15.2.Core, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v15.2.UI, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v15.2.Extensions, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraScheduler.v15.2.Core, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="Mono.Cecil, Version=0.9.6.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\code\cecil-master\bin\net_2_0_Debug\Mono.Cecil.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Attribute\Aggreated.cs" />
+    <Compile Include="BusinessObjects\SYS\BODefiner.cs" />
+    <Compile Include="BusinessObjects\Test\AggregateFunction.cs" />
+    <Compile Include="BusinessObjects\Test\AggregateFunctionCollectionElement.cs" />
+    <Compile Include="BusinessObjects\Base\EnumAccountType.cs" />
+    <Compile Include="BusinessObjects\Base\EnumPaymentType.cs" />
+    <Compile Include="BusinessObjects\Base\FormItemLogic.cs" />
+    <Compile Include="BusinessObjects\Base\FormBaseLogic.cs" />
+    <Compile Include="BusinessObjects\Base\ICategoryBase.cs" />
+    <Compile Include="BusinessObjects\Base\ICaption.cs" />
+    <Compile Include="BusinessObjects\Base\IFormBase.cs" />
+    <Compile Include="BusinessObjects\Base\IFormItemBase.cs" />
+    <Compile Include="BusinessObjects\Base\IName.cs" />
+    <Compile Include="BusinessObjects\Base\IPictureItem.cs" />
+    <Compile Include="BusinessObjects\Base\ISimpleObject.cs" />
+    <Compile Include="BusinessObjects\Base\ISuperLookupHelper.cs" />
+    <Compile Include="BusinessObjects\Base\Nav.cs" />
+    <Compile Include="BusinessObjects\Base\PictureItem.cs" />
+    <Compile Include="BusinessObjects\Base\SimpleObjectLoic.cs" />
+    <Compile Include="BusinessObjects\Test\TestPersistentAliasDC.cs" />
+    <Compile Include="BusinessObjects\Test\TestPropertyType.cs" />
+    <Compile Include="BusinessObjects\Module\Code.cs" />
+    <Compile Include="BusinessObjects\Security\IDcMemberPermissions.cs" />
+    <Compile Include="BusinessObjects\Security\IdcMemberPermissionsLogic.cs" />
+    <Compile Include="BusinessObjects\Security\IDcObjectPermissions.cs" />
+    <Compile Include="BusinessObjects\Security\IdcObjectPermissionsLogic.cs" />
+    <Compile Include="BusinessObjects\Security\IDcRole.cs" />
+    <Compile Include="BusinessObjects\Security\IdcRoleLogic.cs" />
+    <Compile Include="BusinessObjects\Security\IDcTypePermissions.cs" />
+    <Compile Include="BusinessObjects\Security\IDcUser.cs" />
+    <Compile Include="BusinessObjects\Security\IdcUserLogic.cs" />
+    <Compile Include="BusinessObjects\SYS\BusinessBuilder\BuilderHelper.cs" />
+    <Compile Include="BusinessObjects\SYS\View\DetailViewInfo.cs" />
+    <Compile Include="BusinessObjects\SYS\BusinessBuilder\FormCreator.cs" />
+    <Compile Include="BusinessObjects\SYS\BusinessBuilder\IAppearanceRule.cs" />
+    <Compile Include="BusinessObjects\SYS\BusinessBuilder\IBusinessObject.cs" />
+    <Compile Include="BusinessObjects\SYS\BusinessBuilder\IProperty.cs" />
+    <Compile Include="BusinessObjects\SYS\View\ObjectViewInfo.cs" />
+    <Compile Include="BusinessObjects\SYS\IconManager\IICons.cs" />
+    <Compile Include="BusinessObjects\SYS\Program\UserMethod.cs" />
+    <Compile Include="BusinessObjects\SYS\FlowChart\AddNode.cs" />
+    <Compile Include="BusinessObjects\SYS\FlowChart\EdgeStyle.cs" />
+    <Compile Include="BusinessObjects\SYS\FlowChart\FlowChartAction.cs" />
+    <Compile Include="BusinessObjects\SYS\FlowChart\FlowChartActionParameter.cs" />
+    <Compile Include="BusinessObjects\SYS\FlowChart\FlowChartEdge.cs" />
+    <Compile Include="BusinessObjects\SYS\FlowChart\FlowChartFormNode.cs" />
+    <Compile Include="BusinessObjects\SYS\FlowChart\FlowChartMenuItem.cs" />
+    <Compile Include="BusinessObjects\SYS\FlowChart\FlowChartNode.cs" />
+    <Compile Include="BusinessObjects\SYS\FlowChart\FlowChartSettings.cs" />
+    <Compile Include="BusinessObjects\SYS\BusinessBuilder\BusinessBuilder.cs" />
+    <Compile Include="BusinessObjects\SYS\Import\ExcelFileOption.cs" />
+    <Compile Include="BusinessObjects\SYS\Import\ImportDataDefaultPropertyAttribute.cs" />
+    <Compile Include="BusinessObjects\SYS\Import\ImportDefaultFilterCriteria.cs" />
+    <Compile Include="BusinessObjects\SYS\Import\ImportOptionsAttribute.cs" />
+    <Compile Include="BusinessObjects\SYS\FlowChart\MenuItemBase.cs" />
+    <Compile Include="BusinessObjects\SYS\FormConverter\IFormConverter.cs" />
+    <Compile Include="BusinessObjects\SYS\Import\ImportDataSolution.cs" />
+    <Compile Include="BusinessObjects\SYS\FlowChart\MenuItem.cs" />
+    <Compile Include="BusinessObjects\SYS\FlowChart\NodeStyle.cs" />
+    <Compile Include="BusinessObjects\SYS\FlowChart\NodeType.cs" />
+    <Compile Include="BusinessObjects\SYS\Validation\RuleSource.cs" />
+    <Compile Include="BusinessObjects\SYS\Validation\ValidationRule.cs" />
+    <Compile Include="Controllers\BusinessBuilder\BusinessBuilderViewController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\BusinessBuilder\BusinessBuilderViewController.Designer.cs">
+      <DependentUpon>BusinessBuilderViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\ComplexListView\CategorizedListViewController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\ComplexListView\CategorizedListViewController.Designer.cs">
+      <DependentUpon>CategorizedListViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\Designer\ViewDesignerViewController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\Designer\ViewDesignerViewController.Designer.cs">
+      <DependentUpon>ViewDesignerViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\EditHelpViewController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\EditHelpViewController.Designer.cs">
+      <DependentUpon>EditHelpViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\Flow\FlowViewController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\Flow\FlowViewController.Designer.cs">
+      <DependentUpon>FlowViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\HiddenToolbar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\UpdateImageNameViewController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\UpdateImageNameViewController.Designer.cs">
+      <DependentUpon>UpdateImageNameViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\ViewObjectWindowController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\ViewObjectWindowController.Designer.cs">
+      <DependentUpon>ViewObjectWindowController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\CollectionSource\AnyCollectionSource.cs" />
+    <Compile Include="Controllers\NavigationViewController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\NavigationViewController.Designer.cs">
+      <DependentUpon>NavigationViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\ObjectSpaceProvider\Class1.cs" />
+    <Compile Include="Editors\DataProvider.cs" />
+    <Compile Include="Editors\Editors.cs" />
+    <Compile Include="Helper\AdmiralModelApplicationCreatorInfoBase.cs" />
+    <Compile Include="Helper\AutoRegisterDomainComponents.cs" />
+    <Compile Include="Helper\IAdmiralXafApplication.cs" />
+    <Compile Include="ModelExtendesion\IModelDashBoardExtendesion.cs" />
+    <Compile Include="Helper\RuntimeModuleBase.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Helper\SystemHelper.cs" />
+    <Compile Include="ModelExtendesion\DetailViewLayout.cs" />
+    <Compile Include="Module.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Module.Designer.cs">
+      <DependentUpon>Module.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PredefinedSystems\ErpDefiner.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="DatabaseUpdate\Updater.cs" />
+    <Compile Include="ViewObject\ViewObject.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Controllers\BusinessBuilder\BusinessBuilderViewController.resx">
+      <DependentUpon>BusinessBuilderViewController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\Designer\ViewDesignerViewController.resx">
+      <DependentUpon>ViewDesignerViewController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\EditHelpViewController.resx">
+      <DependentUpon>EditHelpViewController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\Flow\FlowViewController.resx">
+      <DependentUpon>FlowViewController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\UpdateImageNameViewController.resx">
+      <DependentUpon>UpdateImageNameViewController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Model.DesignedDiffs.xafml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Module.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="DatabaseUpdate\ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="BusinessObjects\ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Controllers\ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="FunctionalTests\ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="FunctionalTests\sample.ets" />
+    <None Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="FunctionalTests\config.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UnusableNodes.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UnusableNodes1.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UnusableNodes2.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UnusableNodes3.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UnusableNodes4.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UnusableNodes5.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UnusableNodes6.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UnusableNodes7.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UnusableNodes8.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UnusableNodes9.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UnusableNodes10.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UnusableNodes11.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UnusableNodes12.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UnusableNodes13.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UnusableNodes14.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UnusableNodes15.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UnusableNodes16.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UnusableNodes17.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UnusableNodes18.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UnusableNodes19.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UnusableNodes20.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UnusableNodes21.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UnusableNodes22.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UnusableNodes23.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UnusableNodes24.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UnusableNodes25.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UnusableNodes26.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UnusableNodes27.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UnusableNodes28.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UnusableNodes29.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UnusableNodes30.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UnusableNodes31.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UnusableNodes32.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Welcome.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="BusinessObjects\CRM\" />
+    <Folder Include="BusinessObjects\PMS\" />
+    <Folder Include="ICons\" />
+    <Folder Include="Images\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
