@@ -546,35 +546,34 @@
         </LayoutGroup>
       </Layout>
     </DetailView>
-    <DetailView Id="IImageProperty_DetailView" Index="1005" />
     <DetailView Id="IListProperty_DetailView" Index="1006">
       <Layout>
         <LayoutGroup Id="Main">
           <LayoutGroup Id="R1" Direction="Horizontal" Index="0" IsNewNode="True">
-            <LayoutItem Id="Name" ViewItem="Name" ShowCaption="" Index="0" IsNewNode="True" />
-            <LayoutItem Id="Caption" ViewItem="Caption" ShowCaption="" Index="1" IsNewNode="True" />
+            <LayoutItem Id="Name" ViewItem="Name" Index="0" IsNewNode="True" />
+            <LayoutItem Id="Caption" ViewItem="Caption" Index="1" IsNewNode="True" />
           </LayoutGroup>
           <LayoutGroup Id="R2" Index="1" IsNewNode="True">
-            <LayoutItem Id="PropertyType" ViewItem="PropertyType" ShowCaption="" Index="2" IsNewNode="True" />
+            <LayoutItem Id="PropertyType" ViewItem="PropertyType" Index="2" IsNewNode="True" />
           </LayoutGroup>
           <LayoutGroup Id="R3" Direction="Horizontal" Index="2" IsNewNode="True">
-            <LayoutItem Id="ToolTip" ViewItem="ToolTip" ShowCaption="" Index="1" IsNewNode="True" />
-            <LayoutItem Id="PropertyEditor" ViewItem="PropertyEditor" ShowCaption="" Index="2" IsNewNode="True" />
+            <LayoutItem Id="ToolTip" ViewItem="ToolTip" Index="1" IsNewNode="True" />
+            <LayoutItem Id="PropertyEditor" ViewItem="PropertyEditor" Index="2" IsNewNode="True" />
           </LayoutGroup>
           <LayoutGroup Id="R4" Index="3" Direction="Horizontal" IsNewNode="True">
-            <LayoutItem Id="IsAggreagte" ViewItem="IsAggreagte" ShowCaption="" Index="0" IsNewNode="True" />
-            <LayoutItem Id="IsManyToMany" ViewItem="IsManyToMany" ShowCaption="" Index="1" IsNewNode="True" />
-            <LayoutItem Id="ReadOnly" ViewItem="ReadOnly" ShowCaption="" Index="2" IsNewNode="True" />
-            <LayoutItem Id="ImmediatePostData" ViewItem="ImmediatePostData" ShowCaption="" Index="3" IsNewNode="True" />
+            <LayoutItem Id="IsAggreagte" ViewItem="IsAggreagte" Index="0" IsNewNode="True" />
+            <LayoutItem Id="IsManyToMany" ViewItem="IsManyToMany" Index="1" IsNewNode="True" />
+            <LayoutItem Id="ReadOnly" ViewItem="ReadOnly" Index="2" IsNewNode="True" />
+            <LayoutItem Id="ImmediatePostData" ViewItem="ImmediatePostData" Index="3" IsNewNode="True" />
           </LayoutGroup>
           <LayoutGroup Id="R5" Index="4" Direction="Horizontal" IsNewNode="True">
-            <LayoutItem Id="BackReferenceProperty" ViewItem="BackReferenceProperty" ShowCaption="" Index="2" IsNewNode="True" />
-            <LayoutItem Id="Index" ViewItem="Index" ShowCaption="" Index="3" IsNewNode="True" />
+            <LayoutItem Id="BackReferenceProperty" ViewItem="BackReferenceProperty" Index="2" IsNewNode="True" />
+            <LayoutItem Id="Index" ViewItem="Index" Index="3" IsNewNode="True" />
           </LayoutGroup>
           <LayoutGroup Id="IFilterOption" Index="5" ShowCaption="False" IsNewNode="True">
-            <LayoutItem Id="Criteria" ViewItem="Criteria" ShowCaption="" Index="0" IsNewNode="True" />
-            <LayoutItem Id="DataSourceProperty" ViewItem="DataSourceProperty" ShowCaption="" Index="1" IsNewNode="True" />
-            <LayoutItem Id="DataSourceCriteriaProperty" ViewItem="DataSourceCriteriaProperty" ShowCaption="" Index="2" IsNewNode="True" />
+            <LayoutItem Id="Criteria" ViewItem="Criteria" Index="0" IsNewNode="True" />
+            <LayoutItem Id="DataSourceProperty" ViewItem="DataSourceProperty" Index="1" IsNewNode="True" />
+            <LayoutItem Id="DataSourceCriteriaProperty" ViewItem="DataSourceCriteriaProperty" Index="2" IsNewNode="True" />
           </LayoutGroup>
           <LayoutGroup Id="ListRules_Group" Index="6" />
           <LayoutGroup Id="SimpleEditors" Removed="True">
@@ -647,6 +646,7 @@
         </LayoutGroup>
       </Layout>
     </DetailView>
+    <DetailView Id="IImageProperty_DetailView" Index="1009" />
     <DetailView Id="FlowChartEdge_DetailView">
       <Layout>
         <LayoutGroup Id="Main">

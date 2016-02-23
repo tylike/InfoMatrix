@@ -19,6 +19,11 @@
         <ColumnInfo Id="Name" SortIndex="1" />
       </Columns>
     </ListView>
+    <ListView Id="IBusinessObject_Properties_ListView">
+      <Columns>
+        <ColumnInfo Id="Name" SortIndex="1" />
+      </Columns>
+    </ListView>
     <ListView Id="ISimpleType_ListView">
       <Columns>
         <ColumnInfo Id="Name" SortIndex="-1" SortOrder="None" />

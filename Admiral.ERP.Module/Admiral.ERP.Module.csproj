@@ -165,7 +165,7 @@
     <Compile Include="BusinessObjects\Base\ISuperLookupHelper.cs" />
     <Compile Include="BusinessObjects\Base\Nav.cs" />
     <Compile Include="BusinessObjects\Base\PictureItem.cs" />
-    <Compile Include="BusinessObjects\Base\SimpleObjectLoic.cs" />
+    <Compile Include="BusinessObjects\Base\SimpleObjectLogic.cs" />
     <Compile Include="BusinessObjects\Test\TestPersistentAliasDC.cs" />
     <Compile Include="BusinessObjects\Test\TestPropertyType.cs" />
     <Compile Include="BusinessObjects\Module\Code.cs" />
@@ -307,6 +307,7 @@
       <SubType>Designer</SubType>
       <DependentUpon>Module.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram1.cd" />

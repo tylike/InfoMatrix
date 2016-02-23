@@ -5,7 +5,7 @@ using DevExpress.ExpressApp.DC;
 namespace Admiral.ERP.Module.BusinessObjects
 {
     [DomainLogic(typeof(ISimpleObject))]
-    public class SimpleObjectLoic
+    public class SimpleObjectLogic
     {
 
         public static void AfterConstruction(ISimpleObject obj)
