@@ -29,11 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            DevExpress.ExpressApp.Actions.ChoiceActionItem choiceActionItem1 = new DevExpress.ExpressApp.Actions.ChoiceActionItem();
-            DevExpress.ExpressApp.Actions.ChoiceActionItem choiceActionItem2 = new DevExpress.ExpressApp.Actions.ChoiceActionItem();
-            DevExpress.ExpressApp.Actions.ChoiceActionItem choiceActionItem3 = new DevExpress.ExpressApp.Actions.ChoiceActionItem();
             this.GenerateSystem = new DevExpress.ExpressApp.Actions.SimpleAction(this.components);
-            this.QuickCreateBusiness = new DevExpress.ExpressApp.Actions.SingleChoiceAction(this.components);
             // 
             // GenerateSystem
             // 
@@ -44,43 +40,14 @@
             this.GenerateSystem.ToolTip = null;
             this.GenerateSystem.Execute += new DevExpress.ExpressApp.Actions.SimpleActionExecuteEventHandler(this.GenerateSystem_Execute);
             // 
-            // QuickCreateBusiness
-            // 
-            this.QuickCreateBusiness.Caption = "创建";
-            this.QuickCreateBusiness.ConfirmationMessage = null;
-            this.QuickCreateBusiness.Id = "QuickCreateBusiness";
-            choiceActionItem1.Caption = "表单";
-            choiceActionItem1.Data = "表单";
-            choiceActionItem1.ImageName = null;
-            choiceActionItem1.Shortcut = null;
-            choiceActionItem1.ToolTip = null;
-            choiceActionItem2.Caption = "高级";
-            choiceActionItem2.Data = "高级";
-            choiceActionItem2.ImageName = null;
-            choiceActionItem2.Shortcut = null;
-            choiceActionItem2.ToolTip = null;
-            choiceActionItem3.Caption = "从模板";
-            choiceActionItem3.Data = "从模板";
-            choiceActionItem3.ImageName = null;
-            choiceActionItem3.Shortcut = null;
-            choiceActionItem3.ToolTip = null;
-            this.QuickCreateBusiness.Items.Add(choiceActionItem1);
-            this.QuickCreateBusiness.Items.Add(choiceActionItem2);
-            this.QuickCreateBusiness.Items.Add(choiceActionItem3);
-            this.QuickCreateBusiness.ItemType = DevExpress.ExpressApp.Actions.SingleChoiceActionItemType.ItemIsOperation;
-            this.QuickCreateBusiness.ToolTip = null;
-            this.QuickCreateBusiness.Execute += new DevExpress.ExpressApp.Actions.SingleChoiceActionExecuteEventHandler(this.QuickCreateBusiness_Execute);
-            // 
             // BusinessBuilderViewController
             // 
             this.Actions.Add(this.GenerateSystem);
-            this.Actions.Add(this.QuickCreateBusiness);
 
         }
 
         #endregion
 
         private DevExpress.ExpressApp.Actions.SimpleAction GenerateSystem;
-        private DevExpress.ExpressApp.Actions.SingleChoiceAction QuickCreateBusiness;
     }
 }

@@ -530,10 +530,12 @@ namespace Admiral.ERP.Module.BusinessObjects.SYS
 
         [Agg, XafDisplayName("规则"), BackReferenceProperty("OwnerListProperty")]
         IList<IRuleInfoBase> ListRules { get; }
+
         [XafDisplayName("多对多")]
         bool IsManyToMany { get; set; }
 
         [XafDisplayName("关系属性")]
+        [DataSourceProperty("PropertyType.<IBusinessObject>Properties")]
         IProperty BackReferenceProperty { get; set; }
     }
 

@@ -35,7 +35,7 @@ namespace Admiral.ERP.Module.Controllers
             TargetViewNesting = Nesting.Root;
             TargetViewType = ViewType.ListView;
             InitializeComponent();
-            QuickCreateBusiness.Category = "ObjectsCreation";
+            //QuickCreateBusiness.Category = "ObjectsCreation";
 
             // Target required Views (via the TargetXXX properties) and create their Actions.
         }

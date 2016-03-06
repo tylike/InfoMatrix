@@ -14,7 +14,7 @@
         <ColumnInfo Id="Name" SortIndex="1" />
       </Columns>
     </ListView>
-    <ListView Id="IBusinessObject_ListView">
+    <ListView Id="IBusinessObject_ListView" PageSize="20" Filter="StartsWith([EditorType!.Caption], 'a')" FilterEnabled="False">
       <Columns>
         <ColumnInfo Id="Name" SortIndex="1" />
       </Columns>

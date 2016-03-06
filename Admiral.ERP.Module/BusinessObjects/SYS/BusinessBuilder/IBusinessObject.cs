@@ -27,6 +27,8 @@ namespace Admiral.ERP.Module.BusinessObjects.SYS
 
         [XafDisplayName("序号")]
         int Index { get; set; }
+
+
     }
 
     [XafDisplayName("简单类型")]

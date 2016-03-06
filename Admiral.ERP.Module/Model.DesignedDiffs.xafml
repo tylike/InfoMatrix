@@ -1,16 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Application Title="Admiral.ERP" Logo="ExpressAppLogo">
-  <ActionDesign>
-    <Actions>
-      <Action Id="QuickCreateBusiness" ImageName="Action_New">
-        <ChoiceActionItems>
-          <ChoiceActionItem Id="表单" ImageName="ModelEditor_Views" Index="0" />
-          <ChoiceActionItem Id="高级" ImageName="ModelEditor_Settings" Index="1" />
-          <ChoiceActionItem Id="从模板" Index="2" ImageName="Action_Copy_CellValue" />
-        </ChoiceActionItems>
-      </Action>
-    </Actions>
-  </ActionDesign>
   <BOModel>
     <Class Name="Admiral.ERP.Module.BusinessObjects.SYS.IStringProperty" Index="1000" />
     <Class Name="Admiral.ERP.Module.BusinessObjects.SYS.INumberProperty" Index="2000" />
@@ -779,11 +768,7 @@
         </LayoutGroup>
       </Layout>
     </DetailView>
-    <ListView Id="IBusinessObject_ListView" Caption="业务对象">
-      <HiddenActions>
-        <ActionLink ActionId="New" IsNewNode="True" />
-      </HiddenActions>
-    </ListView>
+    <ListView Id="IBusinessObject_ListView" Caption="业务对象" />
     <ListView Id="IBusinessObject_Properties_ListView" AllowEdit="True" NewItemRowPosition="Top" />
     <ListView Id="IBusinessObjectBase_LookupListView">
       <Columns>
